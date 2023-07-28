@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I miei progetti</title>
+    <style>
+        * {
+            text-decoration: none;
+            margin-top: 7px;
+            box-sizing: border-box;
+            align: middle;
+            padding: auto;
+            width: 100%;
+            text-align: center;
+            font-family: Calibri;
+            justify-content: center;
+           }
+        body {
+            background-image: url("https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
+            background-size: cover;
+            }
+        .linea {
+            display: inline-block;
+            position: absolute;
+            bottom: 2%;
+            left: 0%;
+            text-align: center;
+            }
+        .menu {
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            color: #191919;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 2px solid black;
+            }
+        .logo {
+            width: 15%;
+            }
+        .title {
+            box-shadow: 10px 10px 7px 7px #191919;
+            font-size: 60px;
+            background-color: #d1ac9c;
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            border: 5px solid #191919;
+            border-radius: 5px 10px;
+            width: 40%;
+            margin: auto;
+            margin-top: 25px;
+            padding: 7px; 0px; 7px; 0px;
+            display: flex;
+            font-size: 4.5vw;
+            }
+        .block1,.block2,.block3 {
+            box-shadow: 10px 10px 7px 7px #191919;
+            display: inline-block;
+            background-color: #D4B2A2;
+            background-image: url("https://img.freepik.com/premium-photo/recycled-white-paper-texture-background-vintage-banner-wallpaper_118047-9093.jpg?w=1380");
+            border: 5px solid #191919;
+            border-radius: 7px; 5px;
+            width: 25%;
+            height: auto;
+            padding: 20px; 10px; 20px; 10px;
+            font-size: 1.5vw;
+            }
+        .block1 {
+            position: absolute;
+            top: 25%;
+            left: 3%;
+            }
+        .block2 {
+            position: absolute;
+            top: 31%;
+            left: 38%;
+            }
+        .block3 {
+            position: absolute;
+            top: 25%;
+            right: 3%;
+            }
+    </style>
+    <script>
+    function comparsa(x) {
+    x.style.display = "block";
+    }
+    function scomparsa(x) {
+    x.style.display = "none";
+    }
+</script>
 </head>
 <body>
-    <h1>Benvenuti/h1>
+    <div class="pagina">
+        <h1 class="title">I miei progetti&emsp;<img class="logo" src="{{url_for('static', filename='logoGitHub.png')}}"></h1>
+        <span class="block1"> <a href="portfolio_flask.html" style="color:#000000" >
+            <strong>WEB APPS</strong><br><br>
+            La sezione raccoglie le applicazioni implementate con il framework Flask.<br><br>
+            Le apps sono sviluppate in Python e HTML con elementi di CSS e JS.<br>
+            Fanno uso della libreria matplotlib per la creazione di grafici e di MySql per la gestione dei dati.
+        </a></span>
 
+        <span class="block2">
+            <strong>PYTHON GUI</strong><br><br>
+            La sezione raccoglie i programmi implementati con le interfacce grafiche Tkinter.<br><br>
+            Sono sviluppati in Python, utilizzando MySQL ed i files pickle per la gestione dei dati
+            e la libreria matplotlib per l'elaborazione di grafici.
+        </span>
+
+        <span class="block3">
+            <strong>PYTHON CONSOLE</strong><br><br>
+            La sezione raccoglie i programmi Python per console.<br><br>
+            Sono sviluppati ad oggetti e sfruttano le classi ed i principali metodi
+            per la manipolazione di stringhe e liste. <br>
+            Vengono utilizzate le librerie pickle, time, matplotlib.
+        </span>
+    </div>
+    <div class="linea">
+        <span><a class="menu" href="portfolio_index.html">HOME</a></span>
+        <span><a class="menu" href="portfolio_flask.html">Porfolio FLASK</a></span>
+        <span><a class="menu" href="portfolio_tkinter.html">Porfolio TKINTER</a></span>
+        <span><a class="menu" href="portfolio_console.html">Porfolio CONSOLE</a></span>
+    </div>
 </body>
 </html>
