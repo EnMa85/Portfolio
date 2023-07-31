@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributore</title>
+    <style>
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+            padding: auto;
+            width: 100%;
+            text-align: center;
+            font-family: Calibri;
+            color: #191919;
+            }
+        .menu {
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            color: #191919;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 2px solid black;
+            font-size: 1.4vw;
+            }
+        body {
+            background-color: #dfc6bb;
+            background-size: cover;
+            background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
+            font-size: 40px;
+            }
+        h2 {
+            color: #191919;
+            }
+        .screen {
+            width: 47%;
+            }
+        .mini_screen {
+            width: 30%;
+            }
+        .medium_screen {
+            width: 30%;
+            }
+        .descr, .descr2 {
+            font-size: 25px;
+            width: 20%;
+            position: relative;
+            right: 3%;
+            font-size: 1.4vw;
+            }
+        .descr2 {
+            width: 25%;
+            position: relative;
+            right: -20%;
+            }
+        .row {
+            display: flex;
+            width: 90%;
+            position: relative;
+            left: 5%;
+            justify-content: center;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 3px solid #191919;
+            }
+        @media screen and (max-width: 768px) {
+        .row {
+            display: block;
+            }
+        .descr {
+            width: 90%;
+            font-size: 2.5vw;
+            position: relative;
+            left:3%;
+            }
+        body {
+            font-size: 2.5vw;
+            }
+        .screen, .mini_screen{
+            width: 90%;
+            position: relative;
+            left:-2%;
+            }
+        .mini_screen {
+            width: 35%;
+            vertical-align: middle;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Distributore</h2>
+    <div class="row">
+        <p class="descr">Il progetto gestisce un distributore di bevande.<br><br>L'utente deve inserire il suo ID
+           chiavetta oppure crearne uno nuovo e dopo essersi loggato con le credenziali corrette può scegliere se
+           effettuare una ricarica o selezionare una bevanda.<br><br>Per la generazione di un nuovo ID e di una nuova
+           password è stata utilizzata la libreria Random.</p>
+        <img class="mini_screen" src="{{url_for('static', filename='screenDistributore.png')}}">
+        <img class="mini_screen" src="{{url_for('static', filename='screenBevande.png')}}">
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr">Il progetto è costruito su due classi.<br>La classe Conto contiene l'ID, il saldo e
+           le credenziali di ogni utente.<br><br>La classe Distributore raccoglie tutti gli id delle chiavette attive.<br>
+           <br>Dentro quest'ultima sono implementati i metodi che agiscono sui dati degli ID, ovvero il versamento
+            e l'erogazione con relativi aggiornamenti del saldo.<br></p>
+        <img class="screen" src="{{url_for('static', filename='codeDistribClassi.png')}}">
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr">Alla fine di ogni erogazione, il display visualizza in automatico il saldo aggiornato
+           direttamente nella schermata principale.<br><br>I messaggi di avviso invece, come quello di accesso negato e
+           di accesso effettuato, vengono visualizzati come pop-up sfruttando la libreria messagebox di Tkinter.<br></p>
+        <img class="mini_screen" src="{{url_for('static', filename='screenErogazione.png')}}">
+        <img class="mini_screen" src="{{url_for('static', filename='screenAccessoNegato.png')}}">
+    </div>
+    <h6 class="row"><a href="" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <div id="footer">
+        <span><a class="menu" href="portfolio_index.html">HOME</a></span>
+        <span><a class="menu" href="portfolio_flask.html">Porfolio FLASK</a></span>
+        <span><a class="menu" href="portfolio_tkinter.html">Porfolio TKINTER</a></span>
+        <span><a class="menu" href="portfolio_console.html">Porfolio CONSOLE</a></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercato</title>
+    <style>
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+            padding: auto;
+            width: 100%;
+            text-align: center;
+            font-family: Calibri;
+            color: #191919;
+            }
+        .menu {
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            color: #191919;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 2px solid black;
+            font-size: 1.4vw;
+            }
+        body {
+            background-color: #dfc6bb;
+            background-size: cover;
+            background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
+            font-size: 40px;
+            }
+        .screen {
+            width: 40%;
+            }
+        .mini_screen {
+            width: 25%;
+            }
+        .descr {
+            font-size: 25px;
+            width: 25%;
+            position: relative;
+            left: 15%;
+            font-size: 1.4vw;
+            }
+        .row {
+            display: flex;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 3px solid #191919;
+            width: 90%;
+            position: relative;
+            left: 5%;
+            justify-content: center;
+            }
+        @media screen and (max-width: 768px) {
+        .row {
+            display: block;
+            }
+        .descr {
+            width: 90%;
+            font-size: 2.5vw;
+            position: relative;
+            left:4%;
+            }
+        body {
+            font-size: 2.5vw;
+            }
+        h2 {
+            color: #191919;
+            }
+        .screen, .mini_screen{
+            width: 90%;
+            position: relative;
+            left:-2%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Supermercato</h2>
+    <div class="row">
+        <p class="descr"><br>Il progetto gestisce gli acquisti online di un supermercato ed è suddiviso in sezione
+           cliente e sezione gestore.<br><br>Il cliente, dopo aver effettuato il login o essersi registrato, consulta
+           l'elenco dei prodotti categoria per categoria tramite una combo selection e li inserisce nel carrello.<br><br>
+           Confermando l'acquisto viene stampato lo scontrino contenente l'elenco dei prodotti, il prezzo parziale e
+           totale, la data d'acquisto.</p>
+        <p><img class="screen" src="{{url_for('static', filename='screenSupermercato.png')}}"><br>
+        <img class="screen" src="{{url_for('static', filename='screenScontrino.png')}}"></p>
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr"><br>I dati di accesso vengono salvati su un database MySql contenente data di accesso e id utente,
+           questi verranno successivamente analizzati nella pagina statistiche.<br><br>Su un secondo database vengono
+           archiviati i prodotti acquistati, l'id utente e la data di acquisto.<br></p>
+        <div><br><img class="screen" src="{{url_for('static', filename='codeCookies.png')}}"><br></div>
+    </div>
+    <br>
+    <div class="row">
+         <p class="descr"><br>Nella sua pagina dedicata, il gestore può scegliere stampare le statistiche di vendita
+            scegliendo tra vari tipi di statistiche e di grafici, quali per cliente, per prodotto, accessi per data ed
+            accessi del giorno.<br></p>
+         <div><img class="screen" src="{{url_for('static', filename='screenGestore.png')}}"></div>
+    </div>
+    <br>
+    <div class="row">
+        <img class="mini_screen" src="{{url_for('static', filename='screenAccessiData.png')}}">
+        <img class="mini_screen" src="{{url_for('static', filename='codeStatData.png')}}">
+        <img class="mini_screen" src="{{url_for('static', filename='screenAccessiGiorno.png')}}">
+    </div>
+    <h6 class="row"><a href="" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <div id="footer">
+        <span><a class="menu" href="portfolio_index.html">HOME</a></span>
+        <span><a class="menu" href="portfolio_flask.html">Porfolio FLASK</a></span>
+        <span><a class="menu" href="portfolio_tkinter.html">Porfolio TKINTER</a></span>
+        <span><a class="menu" href="portfolio_console.html">Porfolio CONSOLE</a></span>
+    </div>
+</body>
+</html>
