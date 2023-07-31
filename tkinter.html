@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetti Tkinter</title>
-    <style>
-        * {
+ * {
             text-decoration: none;
-            box-sizing: border-box;
-            padding: auto;
             width: 100%;
             text-align: center;
             font-family: Calibri;
             color: #191919;
            }
-        #footer {
-            position: absolute;
-            bottom: 2%;
-            left: 0%;
-            text-align: center;
-            }
         .menu {
             background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
             color: #191919;
@@ -28,75 +13,74 @@
             border-radius: 3px 7px;
             padding: 5px 7px 5px 7px;
             border: 2px solid black;
-            font-size: 1.4vw;
+            font-size: 2vw;
             }
         body {
             background-color: #dfc6bb;
             background-size: cover;
             background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
-            font-size: 20px;
-            font-size: 2.5vw;
-            padding: 7px;
+            font-size: 43px;
             }
         .block1,.block2 {
+            display: inline-block;
             background-size: cover;
             background-repeat: no-repeat;
             border: 2px solid #191919;
-            width: 30%;
-            height: 45%;
+            width: 400px;
+            height: 350px;
             font-size: 40px;
             font-size: 2.5vw;
             color: #191919;
-            padding: 5px;
+            margin: 0%;
+            font-size: 2.2vw;
+            padding: 2%;
+            margin-bottom: 5%;
             }
         .block1 {
             background-image: url('https://us.123rf.com/450wm/djvstock/djvstock2110/djvstock211000728/175582346-denaro-virtuale-e-pagamento.jpg?ver=6');
-            position: absolute;
-            top: 35%;
-            left: 15%;
-            background-position: center;
+            position: relative;
+            margin-right: 5%;
             text-align: left;
+            margin-bottom: 5%;
             }
         .block2 {
             background-color: white;
             background-image: url('https://media.gettyimages.com/id/623783982/it/vettoriale/tempo-di-caff%C3%A8.jpg?s=612x612&w=gi&k=20&c=hQdo4dT4nuSuTuMWVWoh6Sx0WzfLC4AVxujgxnMsOnU=');
-            position: absolute;
-            top: 35%;
-            right: 15%;
+            position: relative;
+            margin-left: 5%;
             background-position: top;
             text-align: right;
             }
-        @media screen and (max-width: 900px) {
-        .block1,.block2{
-            position: absolute;
-            top: 15%;
-            width: 32%;
-            height: 22%;
-            }
-        #footer {
-            bottom: 55%;
+         @media screen and (max-width: 1000px) {
+        .block1, .block2 {
+            width: 290px;
+            height: 254px;
+            font-size: 3.5vw;
             }
         }
         @media screen and (max-width: 768px) {
         .block1,.block2{
-            position: absolute;
-            top: 13%;
-            width: 30%;
-            height: 15%;
+            display: block;
+            margin: auto;
+            font-size: 5vw;
             }
-        #footer {
-            bottom: 60%;
+        .block1 {
+            margin-bottom: 10%;
+            }
+        .menu {
+            font-size: 3vw;
             }
         }
     </style>
 
 </head>
 <body>
-    <h1>Progetti Tkinter</h1>
+    <h2>Progetti Tkinter</h2>
 
-        <a href="bancomat"><strong class="block1">Bancomat</strong></a>
-        <a href="distributore"><strong class="block2">Distributore</strong></a>
+        <div class="block1"><a href="bancomat"><strong>Bancomat</strong></a></div>
+        <div class="block2"><a href="distributore"><strong>Distributore</strong></a></div>
 
+    <br>
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
         <span><a class="menu" href="flask.html">Porfolio FLASK</a></span>
