@@ -87,7 +87,7 @@
         <p class="descr"><br>Il progetto gestisce gli ordini di un ristorante ed è suddiviso in sezione cliente e
            sezione gestore.<br><br>Il cliente, dopo aver effettuato il login o essersi registrato, può comporre
            il suo menù tramite una combo selection ed inoltrare l'ordine.</p>
-        <img class="screen" src="{{url_for('static', filename='screenMenu.png')}}">
+        <img class="screen" src="static/screenMenu.png" />
     </div>
     <br>
     <div class="row">
@@ -95,8 +95,8 @@
            associata ad una lista diversa per agevolare la gestione del menù.<br><br>
            Le liste dei piatti sono passate alla pagina HTML che tramite un ciclo for sviluppa l'elenco delle options.<br>
            <br>In tal modo si automatizza il processo di aggiornamento della pagina in seguito a variazioni dei menù.</p>
-        <img class="medium_screen" src="{{url_for('static', filename='codeOrdina.png')}}">
-        <img class="medium_screen" src="{{url_for('static', filename='codeSelect.png')}}">
+        <img class="medium_screen" src="static/codeOrdina.png" />
+        <img class="medium_screen" src="static/codeSelect.png" />
     </div>
     <br>
     <div class="row">
@@ -105,22 +105,22 @@
           o rifiutarli.<br>
           Gli ordini rifiutati vengono cancellati dal database degli ordini in corso. Quelli accettati vengono
           trasferiti nell'archivio ordini.</p>
-        <img class="medium_screen" src="{{url_for('static', filename='codeAccetta.png')}}">
-        <img class="mini_screen" src="{{url_for('static', filename='screenOrdini.png')}}">
+        <img class="medium_screen" src="static/codeAccetta.png" />
+        <img class="mini_screen" src="static/screenOrdini" />
     </div>
     <br>
     <div class="row">
         <p class="descr"><br>Il gestore può inoltre consultare lo storico degli ordini, il totale degli incassi e le
             statistiche relative alla spesa per cliente ed ai piatti più venduti.<br><br>
            Per l'elaborazione grafica delle statistiche è stata utilizzata la libreria matplotlib.pyplot.<br></p>
-        <img class="screen" src="{{url_for('static', filename='screenGrafico.png')}}">
+        <img class="screen" src="static/screenGrafico" />
     </div>
     <h6 class="row"><a href="" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
-        <span><a class="menu" href="portfolio_index.html">HOME</a></span>
-        <span><a class="menu" href="portfolio_flask.html">Porfolio FLASK</a></span>
-        <span><a class="menu" href="portfolio_tkinter.html">Porfolio TKINTER</a></span>
-        <span><a class="menu" href="portfolio_console.html">Porfolio CONSOLE</a></span>
+        <span><a class="menu" href="index.html">HOME</a></span>
+        <span><a class="menu" href="flask.html">Porfolio FLASK</a></span>
+        <span><a class="menu" href="tkinter.html">Porfolio TKINTER</a></span>
+        <span><a class="menu" href="console.html">Porfolio CONSOLE</a></span>
     </div>
 </body>
 </html>
