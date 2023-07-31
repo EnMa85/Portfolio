@@ -14,8 +14,7 @@
             font-family: Calibri;
             color: #191919;
            }
-        .linea {
-            display: inline-block;
+        #footer {
             position: absolute;
             bottom: 2%;
             left: 0%;
@@ -42,7 +41,6 @@
         .block1,.block2 {
             background-size: cover;
             background-repeat: no-repeat;
-            display: inline-block;
             border: 2px solid #191919;
             width: 30%;
             height: 45%;
@@ -66,17 +64,43 @@
             right: 15%;
             background-position: -15px 50px;
             }
+        @media screen and (max-width: 900px) {
+        .block1,.block2{
+            position: absolute;
+            top: 15%;
+            width: 32%;
+            height: 22%;
+            }
+        #footer {
+            bottom: 55%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+        .block1,.block2{
+            position: absolute;
+            top: 13%;
+            width: 30%;
+            height: 15%;
+            }
+        .block2 {
+            background-position: -5px 20px;
+            }
+        #footer {
+            bottom: 65%;
+            }
+        }
     </style>
 
 </head>
 <body>
     <h1>Progetti Flask</h1>
+    <div id="section">
+        <a href="risto"><strong class="block1">Ristorante</strong></a>
+        <a href="super"><strong class="block2">Supermercato</strong></a>
+    </div>
 
-    <a href="risto"><strong class="block1">Ristorante</strong></a>
 
-    <strong class="block2">Supermercato</strong>
-
-    <div class="linea">
+    <div id="footer">
         <span><a class="menu" href="portfolio_index.html">HOME</a></span>
         <span><a class="menu" href="portfolio_flask.html">Porfolio FLASK</a></span>
         <span><a class="menu" href="portfolio_tkinter.html">Porfolio TKINTER</a></span>
