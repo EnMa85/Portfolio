@@ -20,22 +20,6 @@
             background-image: url("https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
             background-size: cover;
             }
-        .linea {
-            display: inline-block;
-            position: absolute;
-            bottom: 2%;
-            left: 0%;
-            text-align: center;
-            }
-        .menu {
-            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
-            color: #191919;
-            font-size: 25px;
-            font-weight: bold;
-            border-radius: 3px 7px;
-            padding: 5px 7px 5px 7px;
-            border: 2px solid black;
-            }
         .logo {
             width: 15%;
             }
@@ -60,7 +44,7 @@
             background-image: url("https://img.freepik.com/premium-photo/recycled-white-paper-texture-background-vintage-banner-wallpaper_118047-9093.jpg?w=1380");
             border: 5px solid #191919;
             border-radius: 7px; 5px;
-            width: 25%;
+            width: 28%;
             height: auto;
             padding: 20px; 10px; 20px; 10px;
             font-size: 1.5vw;
@@ -73,13 +57,50 @@
         .block2 {
             position: absolute;
             top: 31%;
-            left: 38%;
+            left: 36%;
             }
         .block3 {
             position: absolute;
             top: 25%;
             right: 3%;
             }
+        .menu {
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            color: #191919;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 2px solid black;
+            font-size: 1.5vw;
+            }
+        #footer {
+            position: absolute;
+            bottom: 2%;
+            left: 0%;
+            text-align: center;
+            }
+        @media screen and (max-width: 1000px) {
+        .title {
+            width: 50%;
+            }
+        .logo {
+            margin: auto;
+            }
+        .block1,.block2,.block3 {
+            display: block;
+            font-size: 2vw;
+            width: 45%;
+            position: relative;
+            left: 27.5%;
+            }
+        #footer {
+            position: relative;
+            bottom: 0%;
+            left: -2%;
+            text-align: center;
+            }
+        }
     </style>
     <script>
     function comparsa(x) {
@@ -91,31 +112,35 @@
 </script>
 </head>
 <body>
-    <div class="pagina">
+    <div id="header">
         <h1 class="title">I miei progetti&emsp;<img class="logo" src="{{url_for('static', filename='logoGitHub.png')}}"></h1>
-        <span class="block1"> <a href="flask" style="color:#000000" >
+    </div>
+    <br>
+    <div id="section">
+        <div class="block1"><a href="flask" style="color:#000000">
             <strong>WEB APPS</strong><br><br>
             La sezione raccoglie le applicazioni implementate con il framework Flask.<br><br>
             Le apps sono sviluppate in Python e HTML con elementi di CSS e JS.<br>
             Fanno uso della libreria matplotlib per la creazione di grafici e di MySql per la gestione dei dati.
-        </a></span>
+        </a></div>
 
-        <span class="block2">
+        <div class="block2"><a href="tkinter" style="color:#000000">
             <strong>PYTHON GUI</strong><br><br>
             La sezione raccoglie i programmi implementati con le interfacce grafiche Tkinter.<br><br>
             Sono sviluppati in Python, utilizzando MySQL ed i files pickle per la gestione dei dati
             e la libreria matplotlib per l'elaborazione di grafici.
-        </span>
+        </a></div>
 
-        <span class="block3">
+        <div class="block3"><a href="console" style="color:#000000">
             <strong>PYTHON CONSOLE</strong><br><br>
             La sezione raccoglie i programmi Python per console.<br><br>
             Sono sviluppati ad oggetti e sfruttano le classi ed i principali metodi
             per la manipolazione di stringhe e liste. <br>
             Vengono utilizzate le librerie pickle, time, matplotlib.
-        </span>
+        </a></div>
     </div>
-    <div class="linea">
+    <div id="footer">
+        <hr>
         <span><a class="menu" href="portfolio_index.html">HOME</a></span>
         <span><a class="menu" href="portfolio_flask.html">Porfolio FLASK</a></span>
         <span><a class="menu" href="portfolio_tkinter.html">Porfolio TKINTER</a></span>
