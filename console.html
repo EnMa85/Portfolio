@@ -57,11 +57,7 @@
             background-repeat: round;
             }
         .block4 {
-            display: inline-block;
             background-image: url('https://us.123rf.com/450wm/djvstock/djvstock2110/djvstock211000728/175582346-denaro-virtuale-e-pagamento.jpg?ver=6');
-            background-size: cover;
-            position: relative;
-            margin-right: 5%;
             }
         .block5 {
             background-color: white;
@@ -72,14 +68,14 @@
         * {
             width: 98%;
             }
-        .block1,.block2, .block3{
-            width: 290px;
-            height: 254px;
+        .block1,.block2, .block3, .block4, .block5 {
+            width: 270px;
+            height: 228px;
             display: block;
             font-size: 5.5vw;
             margin: auto;
-            margin-bottom: 5%;
-            margin-top: 7%;
+            margin-bottom: 10%;
+            margin-top: 10%;
             }
         body {
             font-size: 4.2vw;
@@ -88,20 +84,22 @@
             font-size: 2.7vw;
             }
         }
-
     </style>
 </head>
 <body>
     <h2>Progetti Console</h2>
 
-    <a href=""><div class="block1"><strong>Libreria</strong></div></a>
-    <a href="canzoni.html"><div class="block2"><strong>Canzoni</strong></div></a>
-
-    <a href=""><div class="block3"><strong>Rettangoli</strong></div></a>
-
-    <a href="bancomat"><div class="block4"><strong>Bancomat</strong></div></a>
-    <a href="distributore"><div class="block5"><strong>Distributore</strong></div></a>
-
+    <div class="row">
+        <a href=""><div class="block1"><strong>Libreria</strong></div></a>
+        <a href="canzoni.html"><div class="block2"><strong>Canzoni</strong></div></a>
+        <a href=""><div class="block3"><strong>Rettangoli</strong></div></a>
+    </div>
+    
+    <div class="row">
+        <a href=""><div class="block4"><strong>Bancomat</strong></div></a>
+        <a href=""><div class="block5"><strong>Distributore</strong></div></a>
+    </div>
+    
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
         <span><a class="menu" href="flask.html">Porfolio FLASK</a></span>
