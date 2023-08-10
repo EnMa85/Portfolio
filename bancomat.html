@@ -53,6 +53,8 @@
             font-size: 1.4vw;
             }
         .row {
+            position: relative;
+            left: 5%;
             display: flex;
             width: 90%;
             justify-content: center;
@@ -95,7 +97,7 @@
     <h2>Bancomat</h2>
     <div class="row">
         <p class="descr"><br>Il progetto gestisce uno sportello bancomat.<br><br>Dopo aver digitato le credenziali corrette,
-           l'utente accede nella sua area privata e visualizza la lista delle operazioni disponibili.<br></p>
+           l'utente accede nella sua area privata e visualizza la lista delle operazioni disponibili.</p>
         <img class="medium_screen" src="static/screenAccessoNegato.PNG" />
         <img class="medium_screen" src="static/screenTkinterMenu.PNG" />
     </div>
@@ -126,8 +128,8 @@
            Per i grafici è stata utilizzata la libreria matplotlib.pyplot.<br>
            Per l'archiviazione dei dati la libreria pickle.</p>
         <img class="screen" src="static/codeBancoDef2.PNG" /><br>
-        <img class="screen" src="static/screenTkinterGrafici.PNG" />
-        <img class="mini_screen" src="static/screenMovimenti.PNG" />
+        <div><img class="screen" src="static/screenTkinterGrafici.PNG" />
+        <img class="mini_screen" src="static/screenMovimenti.PNG" /></div>
     </div>
     <br>
     <h6 class="row"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/es09_Tkinter_Bancomat_Grafico" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
