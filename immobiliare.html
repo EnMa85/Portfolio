@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercato</title>
+    <style>
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+            padding: auto;
+            width: 100%;
+            text-align: center;
+            font-family: Calibri;
+            color: #191919;
+            }
+        .menu {
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            color: #191919;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 2px solid black;
+            font-size: 1.4vw;
+            }
+        body {
+            background-color: #dfc6bb;
+            background-size: cover;
+            background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
+            font-size: 40px;
+            }
+        .screen {
+            width: 50%;
+            }
+        .medium_screen {
+            width: 40%;
+            }
+        .mini_screen {
+            width: 25%;
+            }
+        .descr {
+            font-size: 25px;
+            width: 25%;
+            position: relative;
+            left: 15%;
+            font-size: 1.4vw;
+            }
+        .row {
+            display: flex;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 3px solid #191919;
+            width: 90%;
+            position: relative;
+            left: 5%;
+            justify-content: center;
+            }
+        @media screen and (max-width: 768px) {
+        .row {
+            display: block;
+            }
+        .descr {
+            width: 90%;
+            font-size: 2.5vw;
+            position: relative;
+            left:4%;
+            }
+        body {
+            font-size: 2.5vw;
+            }
+        h2 {
+            color: #191919;
+            }
+        .screen, .mini_screen{
+            width: 90%;
+            position: relative;
+            left:-2%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Agenzia Immobiliare</h2>
+    <div class="row">
+        <p class="descr"><br>Il progetto gestisce il sito di un'agenzia immobiliare.<br><br>Fa uso di database MySQL per il
+           salvataggio dei dati degli appartamenti e delle librerie OS e werkzeug per la gestione dei files immagine
+           caricati dagli utenti.</p>
+        <p><img class="screen" src="{{url_for('static', filename='agScreen1.PNG')}}"></p>
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr"><br>Il cliente, dopo essersi loggato o registrato nella home, può consultare l'elenco delle
+           case in vendita con le relative foto.<br><br><br>
+           Cliccando sull'apposito pulsante può inserire un proprio annuncio di vendita compilando un form con recapito
+           e dati della casa ed allegando un'immagine, che saranno poi salvati in una tabella provvisoria MySQL ed
+           inviati alla pagina gestore in attesa di essere pubblicati.<br>
+        <p><img class="screen" src="{{url_for('static', filename='agScreen3.PNG')}}"><br>
+        <img class="medium_screen" src="{{url_for('static', filename='agCod6.PNG')}}"></p>
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr"><br>L'immagine viene resa sicura e salvata in una cartella locale rinominandola con un nome univoco,
+           identificato tramite l'ID della tabella.<br><br>
+           Nella tabella MySQL verrà salvato il nome del file.</p>
+        <p><img class="screen" src="{{url_for('static', filename='agCod2.PNG')}}"></p>
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr"><br>La pagina HTML di inserimento annuncio è strutturata in tre sezioni tramite una
+            sequenza di codizioni:<br><br>
+            La prima istanza visualizza il form di caricamento dell'immagine.<br>Se non ci sono errori (per i quali
+            verrebbero passati e stampati dei messaggi di avviso) viene visualizzata la schermata di conferma caricamento
+            e compare il form per l'inserimento degli altri dati.<br><br>
+            Infine viene inviata la conferma di inserimento che visualizza l'immagine ed i dati caricati.</p>
+        <p><img class="screen" src="{{url_for('static', filename='agCod4.PNG')}}"><br>
+        <img class="mini_screen" src="{{url_for('static', filename='agScreen2.PNG')}}"></p>
+    </div>
+    <br>
+    <div class="row">
+        <p class="descr">Il gestore può decidere di pubblicare o rifiutare l'annuncio.<br><br>
+           Se l'annuncio viene rifiutato, l'immagine viene cancellata dalla cartella locale e la riga cancellata dal
+           database.<br><br>
+           Se l'annuncio viene pubblicato, l'intera riga (escluso l'ID che seguirà la nuova numerazione) viene passata
+           nella tabella definitiva.<br><br>
+           L'immagine viene rinominata secondo il nuovo ID.
+        <p><img class="screen" src="{{url_for('static', filename='agCod7.PNG')}}"></p>
+    </div>
+    <h6 class="row"><a href="https://github.com/EnMa85/Esercizi_Python/tree/main/es15_Flask_AgenziaImmobiliare" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <div id="footer">
+        <span><a class="menu" href="index.html">HOME</a></span>
+        <span><a class="menu" href="flask.html">Portfolio FLASK</a></span>
+        <span><a class="menu" href="tkinter.html">Portfolio TKINTER</a></span>
+        <span><a class="menu" href="console.html">Portfolio CONSOLE</a></span>
+    </div>
+</body>
+</html>
