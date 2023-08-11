@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Libreria</title>
     <style>
-        * {
+       * {
             text-decoration: none;
             box-sizing: border-box;
             padding: auto;
@@ -37,26 +37,20 @@
             }
         .descr {
             width: 20%;
+            margin: auto;
             font-size: 1.4vw;
-            position: relative;
-            right: 10%;
-            }
-        .block {
-            width: 40%;
-            display: block;
-            position: relative;
-            left: 10%;
             }
         .row {
-            display: inline;
+            display: flex;
             width: 90%;
             position: relative;
             margin: auto;
+            justify-content: center;
             border-radius: 3px 7px;
             padding: 5px 7px 5px 7px;
             border: 3px solid #191919;
             }
-        @media screen and (max-width: 768px) {
+       @media screen and (max-width: 768px) {
         .row {
             display: block;
             width: 95%;
@@ -92,10 +86,9 @@
            L'utente, tramite console, può scegliere di aggiungere o prenotare (se disponibile) un libro, ricercare un autore, salvare o leggere la lista in un file esterno.<br><br>
            Per il salvataggio su file è stato usato il modulo Pickle.
         </p>
-        <div class="block">
-            <img class="screen" src="static/libri2.PNG" />
+            <img class="screen" src="static/libri2.PNG" /><p><br></p>
             <img class="screen" src="static/libri1.PNG" />
-        </div>
+
     </div>
 
     <br><br>
