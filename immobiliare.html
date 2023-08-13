@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
             border-radius: 3px 7px;
             padding: 5px 7px 5px 7px;
             border: 2px solid black;
-            font-size: 1.4vw;
+            font-size: 1.6vw;
             }
         body {
             background-color: #dfc6bb;
@@ -30,103 +30,137 @@
             background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
             font-size: 40px;
             }
+        .margin0 {
+            margin: 0%;
+            }
         .screen {
-            width: 50%;
+            width: 80%;
+            vertical-align: middle;
+            float: right;
             }
         .medium_screen {
-            width: 40%;
+            width: 60%;
+            margin: auto;
+            vertical-align: middle;
             }
         .mini_screen {
-            width: 25%;
-            }
-        .descr {
-            width: 25%;
-            position: relative;
-            left: 15%;
-            font-size: 1.4vw;
-            }
-        .row {
-            display: flex;
-            width: 90%;
-            justify-content: center;
-            border-radius: 3px 7px;
-            padding: 5px 7px 5px 7px;
-            border: 3px solid #191919;
+            width: 30%;
             margin: auto;
+            vertical-align: middle;
+            }
+         .descr {
+            width: 30%;
+            font-size: 1.7vw;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            margin: auto;
+            position: relative;
+            left: 5%;
+            }
+        .row, .row2 {
+            border-radius: 3px 7px;
+            padding: 1.5%;
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border: 3px solid #191919;
+            width: 85%;
+            display: table;
+            display-content: center;
+            }
+        .row2 {
+            padding: 0.5% 1.5% 0.5% 1.5%;
             }
         @media screen and (max-width: 768px) {
-        .row {
-            display: block;
-            font-size: 2.5vw;
+ * {
+           width: 100%;
+            }
+        .row, .row2 {
+            display: inline-block;
+            width: 90%;
             margin: auto;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            padding: 3%;
+            }
+        .row2 {
+            font-size: 2.7vw;
+            padding: 1.5%;
+            }
+        .descr {
+            width: 80%;
+            font-size: 2.5vw;
+            text-align: center;
+            padding-top: 5%;
+            position: relative;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            }
+        body {
+            font-size: 3vw;
+            margin-top: 3%;
             }
         .menu {
             font-size: 2.4vw;
             }
-        .descr {
-            width: 85%;
-            font-size: 2.5vw;
-            margin: auto;
-            text-align: center;
-            }
-        body {
-            font-size: 3vw;
-            }
         h2 {
             color: #191919;
             }
-        .screen {
-            width: 85%;
-            margin: auto;
+        .screen, .mini_screen, .medium_screen {
+            display-content: center;
+            width: 100%;
+            padding: 5%;
             }
-         .medium_screen {
-            width: 70%;
-            margin: auto;
+        .margin0 {
+            margin-top: 3%;
+            }
+        #footer {
+            margin-top: 4%;
+            }
         }
-         .mini_screen {
-            width: 45%;
-            margin: auto;
-        }
-            
     </style>
 </head>
 <body>
     <h2>Agenzia Immobiliare</h2>
     <div class="row">
-        <p class="descr"><br>Il progetto gestisce il sito di un'agenzia immobiliare.<br><br>Fa uso di database MySQL per il
+        <p class="descr">Il progetto gestisce il sito di un'agenzia immobiliare.<br><br>Fa uso di database MySQL per il
            salvataggio dei dati degli appartamenti e delle librerie OS e Werkzeug per la gestione dei files immagine
            caricati dagli utenti.</p>
         <p><img class="screen" src="static/agScreen1.PNG" /></p>
     </div>
-    <br>
     <div class="row">
-        <p class="descr"><br>Il cliente, dopo essersi loggato o registrato nella home, può consultare l'elenco delle
+        <p class="descr">Il cliente, dopo essersi loggato o registrato nella home, può consultare l'elenco delle
            case in vendita con le relative foto.<br><br><br>
-           Cliccando sull'apposito pulsante può inserire un proprio annuncio di vendita inserendo una foto e compilando 
-           un form con recapito e dati della casa, che saranno poi salvati in una tabella provvisoria MySQL ed inviati 
-           alla pagina gestore in attesa di essere pubblicati.<br></p>
-        <p><img class="screen" src="static/agScreen3.PNG" /><br>
-        <img class="medium_screen" src="static/agCod6.PNG" /></p>
+           Cliccando sull'apposito pulsante può inserire un proprio annuncio di vendita inserendo una foto e compilando
+           un form con recapito e dati della casa, che saranno poi salvati in una tabella provvisoria MySQL ed inviati
+           alla pagina gestore in attesa di essere pubblicati.</p>
+        <p class="margin0">
+            <img class="screen" src="static/agScreen3.PNG" />
+            <img class="medium_screen" src="static/agCod6.PNG" />
+        </p>
     </div>
-    <br>
     <div class="row">
         <p class="descr"><br>L'immagine viene resa sicura e salvata in una cartella locale rinominandola con un nome univoco,
            identificato tramite l'ID della tabella.<br><br>
            Nella tabella MySQL verrà salvato il nome del file.</p>
-        <p><img class="screen" src="static/agCod2.PNG" /></p>
+        <p class="margin0">
+            <img class="screen" src="static/agCod2.PNG" />
+        </p>
     </div>
-    <br>
     <div class="row">
-        <p class="descr"><br>La pagina HTML di inserimento annuncio è strutturata in tre sezioni tramite una
+        <p class="descr">La pagina HTML di inserimento annuncio è strutturata in tre sezioni tramite una
             sequenza di codizioni:<br><br>
             La prima istanza visualizza il form di caricamento dell'immagine.<br>Se non ci sono errori (per i quali
             verrebbero passati e stampati dei messaggi di avviso) viene visualizzata la schermata di conferma caricamento
             e compare il form per l'inserimento degli altri dati.<br><br>
             Infine viene inviata la conferma di inserimento che visualizza l'immagine ed i dati caricati.</p>
-        <p><img class="screen"src="static/agCod4.PNG" /><br>
-        <img class="mini_screen" src="static/agScreen2.PNG" /></p>
+        <p class="margin0">
+            <img class="screen"src="static/agCod4.PNG" />
+            <img class="mini_screen" src="static/agScreen2.PNG" />
+        </p>
     </div>
-    <br>
     <div class="row">
         <p class="descr">Il gestore può decidere di pubblicare o rifiutare l'annuncio.<br><br>
            Se l'annuncio viene rifiutato, l'immagine viene cancellata dalla cartella locale e la riga cancellata dal
@@ -134,7 +168,7 @@
            Se l'annuncio viene pubblicato, l'intera riga (escluso l'ID che seguirà la nuova numerazione) viene passata
            nella tabella definitiva.<br><br>
            L'immagine viene rinominata secondo il nuovo ID.
-        <p><img class="screen" src="static/agCod7.PNG" /></p>
+        <p class="margin0"><img class="screen" src="static/agCod7.PNG" /></p>
     </div>
     <h6 class="row"><a href="https://github.com/EnMa85/Esercizi_Python/tree/main/es16_Flask_AgenziaImmobiliare" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
