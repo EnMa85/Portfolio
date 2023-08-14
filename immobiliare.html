@@ -96,7 +96,7 @@
             width: 80%;
             font-size: 2.5vw;
             text-align: center;
-            padding-top: 5%;
+            padding-top: 3%;
             position: relative;
             left: 0%;
             right: 0%;
@@ -115,16 +115,14 @@
         .screen, .mini_screen, .medium_screen {
             display-content: center;
             width: 100%;
-            position: relative;
-            left: 0%;
-            right: 0%;
-            margin: auto;
+            padding: 5%;
             }
         .margin0 {
             margin-top: 3%;
             }
         #footer {
             margin-top: 4%;
+            margin-bottom: 3%;
             }
         }
     </style>
@@ -135,7 +133,9 @@
         <p class="descr">Il progetto gestisce il sito di un'agenzia immobiliare.<br><br>Fa uso di database MySQL per il
            salvataggio dei dati degli appartamenti e delle librerie OS e Werkzeug per la gestione dei files immagine
            caricati dagli utenti.</p>
-        <p><img class="screen" src="static/agScreen1.PNG" /></p>
+        <p class="margin0">
+            <img class="screen" src="static/agScreen1.PNG" />
+        </p>
     </div>
     <div class="row">
         <p class="descr">Il cliente, dopo essersi loggato o registrato nella home, può consultare l'elenco delle
@@ -175,9 +175,12 @@
            Se l'annuncio viene pubblicato, l'intera riga (escluso l'ID che seguirà la nuova numerazione) viene passata
            nella tabella definitiva.<br><br>
            L'immagine viene rinominata secondo il nuovo ID.
-        <p class="margin0"><img class="screen" src="static/agCod7.PNG" /></p>
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/agCod7.PNG" />
+        </p>
     </div>
-    <h6 class="row"><a href="https://github.com/EnMa85/Esercizi_Python/tree/main/es16_Flask_AgenziaImmobiliare" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/tree/main/es16_Flask_AgenziaImmobiliare" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
         <span><a class="menu" href="flask.html">Portfolio FLASK</a></span>
