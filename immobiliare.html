@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ristorante</title>
+    <title>Agenzia Immobiliare</title>
     <style>
-         * {
+        * {
             text-decoration: none;
             box-sizing: border-box;
             padding: auto;
@@ -30,27 +30,32 @@
             background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
             font-size: 40px;
             }
-        h2 {
+         h2 {
             color: #191919;
             }
         .margin0 {
             margin: 0%;
-            display: table-cell;
-            vertical-align: middle;
             }
-         .screen {
+        .screen {
             width: 80%;
+            vertical-align: middle;
             float: right;
             }
         .medium_screen {
-            width: 42%;
+            width: 60%;
+            vertical-align: middle;
             float: right;
+            position: relative;
+            right: 10%;
             }
         .mini_screen {
-            width: 35%;
+            width: 46%;
+            vertical-align: middle;
             float: right;
+            position: relative;
+            right: 17%;
             }
-        .descr {
+         .descr {
             width: 30%;
             font-size: 1.7vw;
             text-align: center;
@@ -110,16 +115,13 @@
         .screen, .mini_screen, .medium_screen {
             display-content: center;
             width: 100%;
-            padding: 5%;
-            }
-        .mini_screen, .medium_screen {
-            display-content: center;
-            width: 50%;
+            position: relative;
+            right: 0%;
+            left: 0%;
             padding: 5%;
             }
         .margin0 {
             margin-top: 3%;
-            display: inline-block;
             }
         #footer {
             margin-top: 4%;
@@ -129,45 +131,59 @@
     </style>
 </head>
 <body>
-    <h2>Ristorante</h2>
+    <h2>Agenzia Immobiliare</h2>
     <div class="row">
-        <p class="descr">Il progetto gestisce gli ordini di un ristorante ed è suddiviso in sezione cliente e
-           sezione gestore.<br><br>Il cliente, dopo aver effettuato il login o essersi registrato, può comporre
-           il suo menù tramite una combo selection ed inoltrare l'ordine.</p>
+        <p class="descr">Il progetto gestisce il sito di un'agenzia immobiliare.<br><br>Fa uso di database MySQL per il
+           salvataggio dei dati degli appartamenti e delle librerie OS e Werkzeug per la gestione dei files immagine
+           caricati dagli utenti.</p>
         <p class="margin0">
-            <img class="screen" src="static/screenMenu.PNG" />
+            <img class="screen" src="static/agScreen1.PNG" />
         </p>
     </div>
     <div class="row">
-        <p class="descr">La struttura è basata su classi contenenti piatto e prezzo ed ogni categoria di piatto è stata
-           associata ad una lista diversa per agevolare la gestione del menù.<br><br>
-           Le liste dei piatti sono passate alla pagina HTML che tramite un ciclo for sviluppa l'elenco delle options.<br>
-           <br>In tal modo si automatizza il processo di aggiornamento della pagina in seguito a variazioni dei menù.</p>
+        <p class="descr">Il cliente, dopo essersi loggato o registrato nella home, può consultare l'elenco delle
+           case in vendita con le relative foto.<br><br><br>
+           Cliccando sull'apposito pulsante può inserire un proprio annuncio di vendita inserendo una foto e compilando
+           un form con recapito e dati della casa, che saranno poi salvati in una tabella provvisoria MySQL ed inviati
+           alla pagina gestore in attesa di essere pubblicati.</p>
         <p class="margin0">
-            <img class="medium_screen" src="static/codeOrdina.PNG" />
-            <img class="medium_screen" src="static/codeSelect.PNG" />
+            <img class="screen" src="static/agScreen3.PNG" />
+            <img class="medium_screen" src="static/agCod6.PNG" />
         </p>
     </div>
     <div class="row">
-        <p class="descr">Tutti i dati degli ordini, degli utenti e di sessione vengono gestiti su database MySql.<br><br>
-          Il gestore, nella sua area privata, può visualizzare l'elenco degli ordini ricevuti e scegliere se accettarli
-          o rifiutarli.<br>
-          Gli ordini rifiutati vengono cancellati dal database degli ordini in corso. Quelli accettati vengono
-          trasferiti nell'archivio ordini.</p>
+        <p class="descr"><br>L'immagine viene resa sicura e salvata in una cartella locale rinominandola con un nome univoco,
+           identificato tramite l'ID della tabella.<br><br>
+           Nella tabella MySQL verrà salvato il nome del file.</p>
         <p class="margin0">
-            <img class="medium_screen" src="static/codeAccetta.PNG" />
-            <img class="mini_screen" src="static/screenOrdini.PNG" />
+            <img class="screen" src="static/agCod2.PNG" />
         </p>
     </div>
     <div class="row">
-        <p class="descr">Il gestore può inoltre consultare lo storico degli ordini, il totale degli incassi e le
-            statistiche relative alla spesa per cliente ed ai piatti più venduti.<br><br>
-           Per l'elaborazione grafica delle statistiche è stata utilizzata la libreria matplotlib.pyplot.</p>
+        <p class="descr">La pagina HTML di inserimento annuncio è strutturata in tre sezioni tramite una
+            sequenza di codizioni:<br><br>
+            La prima istanza visualizza il form di caricamento dell'immagine.<br>Se non ci sono errori (per i quali
+            verrebbero passati e stampati dei messaggi di avviso) viene visualizzata la schermata di conferma caricamento
+            e compare il form per l'inserimento degli altri dati.<br><br>
+            Infine viene inviata la conferma di inserimento che visualizza l'immagine ed i dati caricati.</p>
         <p class="margin0">
-            <img class="screen" src="static/screenGrafico.PNG" />
+            <img class="screen"src="static/agCod4.PNG" />
+            <img class="mini_screen" src="static/agScreen2.PNG" />
         </p>
     </div>
-    <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/tree/main/es14_Flask_Ristorante" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <div class="row">
+        <p class="descr">Il gestore può decidere di pubblicare o rifiutare l'annuncio.<br><br>
+           Se l'annuncio viene rifiutato, l'immagine viene cancellata dalla cartella locale e la riga cancellata dal
+           database.<br><br>
+           Se l'annuncio viene pubblicato, l'intera riga (escluso l'ID che seguirà la nuova numerazione) viene passata
+           nella tabella definitiva.<br><br>
+           L'immagine viene rinominata secondo il nuovo ID.
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/agCod7.PNG" />
+        </p>
+    </div>
+    <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/tree/main/es16_Flask_AgenziaImmobiliare" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
         <span><a class="menu" href="flask.html">Portfolio FLASK</a></span>
