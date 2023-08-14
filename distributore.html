@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distributore</title>
     <style>
-        * {
+         * {
             text-decoration: none;
             box-sizing: border-box;
             padding: auto;
@@ -13,6 +13,8 @@
             text-align: center;
             font-family: Calibri;
             color: #191919;
+            margin: auto;
+            margin-top: 1%;
             }
         .menu {
             background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
@@ -21,7 +23,7 @@
             border-radius: 3px 7px;
             padding: 5px 7px 5px 7px;
             border: 2px solid black;
-            font-size: 1.4vw;
+            font-size: 1.6vw;
             }
         body {
             background-color: #dfc6bb;
@@ -33,87 +35,131 @@
             color: #191919;
             }
         .screen {
-            width: 47%;
+            width: 80%;
+            float: right;
             }
-        .mini_screen {
+        .medium_screen {
+            width: 42%;
+            float: right;
+            padding: 0.5%;
+            }
+        .descr {
             width: 30%;
-            }
-        .descr, .descr2 {
-            width: 20%;
-            position: relative;
-            right: 3%;
-            font-size: 1.4vw;
-            }
-        .descr2 {
-            width: 25%;
-            position: relative;
-            right: -20%;
-            }
-        .row {
-            display: flex;
-            width: 90%;
+            font-size: 1.7vw;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            margin: auto;
             position: relative;
             left: 5%;
-            justify-content: center;
+            }
+        .row, .row2 {
+            background-image: url("https://st4.depositphotos.com/7269304/20245/i/450/depositphotos_202452090-stock-photo-white-background-with-paper-texture.jpg");
             border-radius: 3px 7px;
-            padding: 5px 7px 5px 7px;
+            padding: 1.5%;
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
             border: 3px solid #191919;
+            width: 85%;
+            display: table;
+            display-content: center;
+            }
+        .row2 {
+            padding: 0.5% 1.5% 0.5% 1.5%;
+            }
+        #footer {
+            margin-bottom: 1%;
             }
         @media screen and (max-width: 768px) {
-        .row {
-            display: block;
+        * {
+           width: 100%;
+            }
+        .row, .row2 {
+            display: inline-block;
+            width: 90%;
+            margin: auto;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            padding: 3%;
+            }
+        .row2 {
+            font-size: 2.7vw;
+            padding: 1.5%;
+            }
+        .descr {
+            width: 80%;
+            font-size: 2.5vw;
+            text-align: center;
+            padding-top: 3%;
+            position: relative;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            }
+        body {
+            font-size: 3vw;
+            margin-top: 3%;
             }
         .menu {
             font-size: 2.4vw;
             }
-        .descr {
-            width: 90%;
-            font-size: 2.5vw;
-            position: relative;
-            left:3%;
+        .screen {
+            display-content: center;
+            width: 100%;
+            padding: 2%;
             }
-        body {
-            font-size: 3vw;
+        .medium_screen {
+            width: 50%;
+            padding: 2%;
             }
-        .screen, .mini_screen{
-            width: 90%;
-            margin: auto;
+        .margin0 {
+            margin-top: 3%;
             }
-        .mini_screen {
-            width: 35%;
-            margin: auto;
-            vertical-align: middle;
+        #footer {
+            margin-top: 4%;
+            margin-bottom: 3%;
             }
-        }
+    }
     </style>
 </head>
 <body>
     <h2>Distributore</h2>
     <div class="row">
-        <p class="descr">Il progetto gestisce un distributore di bevande.<br><br>L'utente deve inserire il suo ID
+        <p class="descr">
+            Il progetto gestisce un distributore di bevande.<br><br>L'utente deve inserire il suo ID
            chiavetta oppure crearne uno nuovo e dopo essersi loggato con le credenziali corrette può scegliere se
            effettuare una ricarica o selezionare una bevanda.<br><br>Per la generazione di un nuovo ID e di una nuova
-           password è stata utilizzata la libreria Random.</p>
-        <img class="mini_screen" src="static/screenDistributore.PNG" />
-        <img class="mini_screen" src="static/screenBevande.PNG" />
+           password è stata utilizzata la libreria Random.
+        </p>
+        <p class="margin0">
+            <img class="medium_screen" src="static/screenDistributore.PNG" />
+            <img class="medium_screen" src="static/screenBevande.PNG" />
+        </p>
     </div>
-    <br>
     <div class="row">
-        <p class="descr">Il progetto è costruito su due classi.<br>La classe Conto contiene l'ID, il saldo e
+        <p class="descr">
+            Il progetto è costruito su due classi.<br>La classe Conto contiene l'ID, il saldo e
            le credenziali di ogni utente.<br><br>La classe Distributore raccoglie tutti gli id delle chiavette attive.<br>
            <br>Dentro quest'ultima sono implementati i metodi che agiscono sui dati degli ID, ovvero il versamento
-            e l'erogazione con relativi aggiornamenti del saldo.<br></p>
-        <img class="screen" src="static/codeDistribClassi.PNG" />
+            e l'erogazione con relativi aggiornamenti del saldo.
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/codeDistribClassi.PNG" />
+        </p>
     </div>
-    <br>
     <div class="row">
-        <p class="descr">Alla fine di ogni erogazione, il display visualizza in automatico il saldo aggiornato
+        <p class="descr">
+            Alla fine di ogni erogazione, il display visualizza in automatico il saldo aggiornato
            direttamente nella schermata principale.<br><br>I messaggi di avviso invece, come quello di accesso negato e
-           di accesso effettuato, vengono visualizzati come pop-up sfruttando la libreria messagebox di Tkinter.<br></p>
-        <img class="mini_screen" src="static/screenErogazione.PNG" />
-        <img class="mini_screen" src="static/screenAccessoNegato.PNG" />
+           di accesso effettuato, vengono visualizzati come pop-up sfruttando la libreria messagebox di Tkinter.
+        </p>
+        <p class="margin0">
+            <img class="medium_screen" src="static/screenErogazione.PNG" />
+            <img class="medium_screen" src="static/screenAccessoNegato.PNG" />
+        </p>
     </div>
-    <h6 class="row"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/es07_Tkinter_Distributore" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/es07_Tkinter_Distributore" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
         <span><a class="menu" href="flask.html">Portfolio FLASK</a></span>
