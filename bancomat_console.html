@@ -145,27 +145,26 @@
             più viene richiamato in automatico ad ogni entrata/uscita eseguita.
         </p>
         <p class="margin0">
-            <img class="screen" src="static/bancomat9.PNG" /><br>
-            <img class="screen" src="static/bancomat8.PNG" />
+            <img class="screen" src="static/bancomat1.PNG" />
+            <img class="screen" src="static/bancomat2.PNG" />
+            <img class="screen" src="static/bancomat3.PNG" />
         </p>
     </div>
 
     <div class="row">
         <p class="descr">
-            L'esecuzione si sviluppa su due cicli While.<br><br>
-            Il primo ciclo chiede all'utente di loggarsi. Se le credenziali sono errate visualizza un messaggio di errore e si ripete fino a quando 
-            non saranno inserite quelle corrette.<br>
-            Se le credenziali sono valide, l'ID dell'utente attivo viene salvato in una variabile che verrà poi passata come parametro 
-            ai vari metodi che saranno chiamati nel ciclo successivo<br><br>
-            Il secondo ciclo, ad accesso effettuato, visualizza l'elenco delle opzioni possibili (Prelievo, Versamento, Bonifico, Stampa saldo, Stampa movimenti, 
-            Stampa grafico, Termina) tra le quali l'utente può scegliere.<br>
-            Il ciclo si ripete fino a quando l'utente non sceglie di terminare.<br><br>
-            Quando l'utente termina, a logout effettuato, il programma salva tutti i movimenti in un file Pickle, che verrà riaperto all'inizio della successiva esecuzione.
+            L'esecuzione si sviluppa su due cicli While.<br>
+            Il primo ciclo chiede all'utente di loggarsi e si ripete fino a quando le credenziali inserite non sono corrette.<br>
+            Se le credenziali sono errate visualizza un messaggio di errore, se sono esatte salva l'ID dell'utente attivo
+            per poterlo passare come parametro ai metodi che saranno chiamati successivamente.<br><br>
+            Il secondo ciclo, ad accesso effettuato, visualizza l'elenco delle opzioni e si ripete fino a quando l'utente
+            non sceglie di terminare.<br><br>
+            Quando l'utente termina, a logout effettuato, il programma salva tutti i movimenti in un file Pickle.
         </p>
         <p class="margin0">
             <img class="screen" src="static/bancomat4.PNG" /><br>
-            <img class="medium_screen" src="static/bancomat11.PNG" />
-            <img class="medium_screen" src="static/bancomat12.PNG" />
+            <img class="medium_screen" src="static/bancomat5.PNG" />
+            <img class="medium_screen" src="static/bancomat6.PNG" />
         </p>
     </div>
 
