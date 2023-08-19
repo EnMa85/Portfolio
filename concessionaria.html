@@ -146,31 +146,39 @@
     <div class="row">
         <p class="descr">
             Il progetto gestisce gli ordini di auto presso una concessionaria.<br><br>
-            All'avvio del programma, l'utente può scegliere, tramite una combo selection, marca, colore ed optionals
-            dell'auto desiderata, dunque inserire la propria mail e richiedere l'invio del preventivo.<br>
-            L'importo verrà sia visualizzato nella stessa pagina, sia inviato via email.<br><br>
-            Se l'utente conferma l'ordine, questo viene salvato in database per essere successivamente elaborato.
+            All'avvio del programma, l'utente può configurare la propria auto scegliendo marca, colore ed optionals
+            tramite una combo selection, dunque inserire la propria mail e richiedere l'invio del preventivo.
         </p>
         <p class="margin0">
-            <img class="mini_screen" src="static/auto1.PNG" />
-            <img class="mini_screen" src="static/auto2.PNG" />
-            <img class="mini_screen" src="static/auto4.PNG" />
-        </p>
-        <p class="margin0">
-            <img class="medium_screen2" src="static/auto17.PNG" />
-            <img class="medium_screen2" src="static/auto19.PNG" />
+            <img class="medium_screen" src="static/auto2.PNG" />
+            <img class="medium_screen" src="static/auto1.PNG" />
         </p>
     </div>
+
     <div class="row">
         <p class="descr">
             I singoli elementi della combo sono associati ad un prezzo tramite la classe Prezzi e raggruppati in delle
             liste distinte per categoria.<br><br>
-            Quando l'utente invia la propria scelta, una serie di cicli FOR annidati scorrono queste liste per
-            associare ogni elemento della selezione al proprio prezzo e comporre così il valore finale dell'auto.
+            Quando l'utente invia la propria configurazione, una serie di cicli FOR scorre queste liste per individuare
+            il prezzo di ogni elemento della selezione e comporre così il valore finale dell'auto.<br><br>
+            L'importo risultante verrà visualizzato nella stessa pagina ed anche inviato all'email indicata dal cliente,
+            sfruttando i moduli email.mime ed smtplib.<br>
+            Se l'utente conferma l'ordine, questo viene salvato in database MySQL per essere successivamente elaborato.
         </p>
         <p class="margin0">
-            <img class="screen" src="static/auto17.PNG" />
             <img class="screen" src="static/auto19.PNG" />
+            <img class="screen" src="static/auto17.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            Il gestore può accedere nella sua area riservata dall'apposito pulsante della pagina principale.<br>
+            Una volta loggato con le proprie credenziali, si apre una nuova pagina con il menù delle opzioni.<br><br>
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/auto19.PNG" />
+            <img class="screen" src="static/auto17.PNG" />
         </p>
     </div>
 
