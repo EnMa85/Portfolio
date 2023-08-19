@@ -162,7 +162,7 @@
             Quando l'utente invia la propria configurazione, una serie di cicli FOR scorre queste liste per individuare
             il prezzo di ogni elemento della selezione e comporre così il valore finale dell'auto.<br><br>
             L'importo risultante verrà visualizzato nella stessa pagina ed anche inviato all'email indicata dal cliente,
-            sfruttando i moduli email.mime ed smtplib.<br><br>
+            sfruttando i moduli Email.mime ed Smtplib.<br><br>
             Se l'utente conferma l'ordine, questo viene salvato in database MySQL per essere successivamente elaborato.
         </p>
         <p class="margin0">
@@ -173,9 +173,9 @@
 
     <div class="row">
         <p class="descr">
-            Il gestore può accedere nella sua area riservata dall'apposito pulsante della pagina principale.<br>
-            Una volta loggato con le proprie credenziali, si apre una nuova pagina con il menù delle opzioni.<br><br>
-
+            Il gestore può accedere alla sua area riservata dall'apposito pulsante della pagina principale.<br><br>
+            Una volta loggato con le proprie credenziali, si apre una nuova pagina con il menù delle opzioni (Stampa
+            Incassi, Ordini ricevuti e Statistiche di vendita).
         </p>
         <p class="margin0">
             <img class="medium_screen" src="static/auto6.PNG" />
@@ -183,6 +183,22 @@
         </p>
     </div>
 
+    <div class="row">
+        <p class="descr">
+            La funzione Stampa_incassi chiama Calcola_incassi e visualizza il totale ottenuto direttamente sulla label
+            di una nuova pagina.<br><br>
+            La funzione Calcola_incassi preleva dal database la lista aggiornata delle vendite e tramite un ciclo FOR
+            somma la colonna Prezzo per ogni auto della tabella, restituendo la sommatoria.<br><br>
+            La funzione Stampa_ordini preleva tutte le colonne della tabella e, con un ciclo FOR, le aggancia riga per
+            riga ad una stringa sfruttando il metodo Join.<br>
+            Finito il ciclo verrà richiamata Calcola_incassi ed il totale verrà inserito a chiusura della stringa.<br><br>
+        </p>
+        <p class="margin0">
+            <img class="creen" src="static/auto12.PNG" />
+        </p>
+    </div>
+
+    
     <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/es13_MySQL_Concessionaria" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
