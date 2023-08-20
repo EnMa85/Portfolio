@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concessionaria</title>
     <style>
-       * {
+        * {
             text-decoration: none;
             box-sizing: border-box;
             padding: auto;
@@ -16,7 +16,7 @@
             margin: auto;
             margin-top: 1%;
             }
-       .menu {
+        .menu {
             background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
             color: #191919;
             font-weight: bold;
@@ -25,33 +25,25 @@
             border: 2px solid black;
             font-size: 1.6vw;
             }
-      body {
+        body {
             background-color: #dfc6bb;
             background-size: cover;
             background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
             font-size: 40px;
             }
-       h2 {
+        h2 {
             color: #191919;
             }
-       .screen {
+        .screen {
             width: 92%;
             float: right;
             }
-       .medium_screen {
+        .medium_screen {
             width: 46%;
             float: right;
             padding: 0.5%;
-            }
-       .medium_screen2 {
-            width: 70%;
-            float: right;
-            padding: 0.5%;
-            }
-       .mini_screen {
-            width: 28%;
-            float: right;
-            padding: 1%;
+            display: table-cell;
+            vertical-align: middle;
             }
         .descr {
             width: 30%;
@@ -123,14 +115,6 @@
             width: 50%;
             padding: 2%;
             }
-        .medium_screen2 {
-            width: 71%;
-            padding: 2%;
-            }
-        .mini_screen {
-            width: 29%;
-            padding: 2%;
-            }
         .margin0 {
             margin-top: 3%;
             }
@@ -138,7 +122,7 @@
             margin-top: 4%;
             margin-bottom: 3%;
             }
-    }
+        }
     </style>
 </head>
 <body>
@@ -188,8 +172,8 @@
             La funzione Stampa_incassi chiama Calcola_incassi e visualizza il totale ottenuto direttamente sulla label
             di una nuova pagina.<br><br>
             La funzione Calcola_incassi preleva dal database la lista aggiornata delle vendite e tramite un ciclo FOR
-            somma la colonna Prezzo per ogni auto della tabella, restituendo la sommatoria.<br><br>
-            La funzione Stampa_ordini preleva tutte le colonne della tabella e le aggancia riga per riga ad una stringa
+            somma la cella Prezzo per ogni auto della tabella, restituendo la sommatoria.<br><br>
+            La funzione Stampa_ordini preleva tutte le colonne della tabella e le aggancia riga per riga ad una stringa,
             sfruttando un ciclo for ed il metodo Join.<br>
             Finito il ciclo verrà richiamata Calcola_incassi ed il totale verrà inserito a chiusura della stringa.
         </p>
@@ -198,7 +182,48 @@
         </p>
     </div>
 
-    
+    <div class="row">
+        <p class="descr">
+            L'utente può salvare in PDF la lista generata da Stampa_ordini.<br>
+            Cliccando sul bottone "Salva lista" viene chiamata la funzione Salva_reportlab_pdf alla quale vengono passati come
+            parametri l'elenco degli ordini, il totale incassi calcolato ed il bottpone stesso, che cambierà testo in
+            "Lista salvata" una volta effettuato il salvataggio.<br><br>
+            Per la creazione del file, la formattazione ed il salvataggio si fa uso della libreria Reportlab.
+        </p>
+        <p class="margin0">
+            <img class="medium_screen" src="static/auto9.PNG" />
+            <img class="medium_screen" src="static/auto7.PNG" />
+            <img class="screen" src="static/auto11.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            Infine, la funzione Salva_statistiche elabora quattro diversi grafici con la libreria Matplotlib.<br><br>
+
+            Per calcolare i dati delle vendite suddivisi per cliente, viene prima creata una lista di tutti i clienti
+            che hanno acquistato pescandoli dalla tabella delle vendite (il ciclo verifica se il cliente non sia già
+            presente in lista, per evitare doppioni).<br>
+            Successivamente, due cicli FOR annidati scorrono questa lista clienti e per ogni cliente pescano e sommano
+            tutte le colonne Prezzo delle vendite a lui associate.<br>
+            I totali per cliente ottenuti vengono inseriti in un'altra lista che avrà la stessa lunghezza e la stessa
+            sequenza della lista clienti per cui, allo stesso indice avremo in una lista il cliente e nell'altra il
+            totale speso.<br><br>
+
+            Per calcolare le vendite suddivise per auto, vengono pescate e salvate in una lista tutte le vendite relative
+            ad una marca. Successivamente viene fatta scorrere la lista creata sommando tutta la colonna Prezzo.<br>
+            Questo passaggio andrà fatto per ogni marca ed i totali per marca ottenuti verrano inseriti nella lista "val"
+            che sarà la base numerica per la creazione del grafico.<br><br>
+
+            Per ogni tipo di dato (vendite per cliente e vendite per marca) verrà elaborato un grafico a torta ed un istogramma.
+        </p>
+        <p class="margin0">
+            <img class="medium_screen" src="static/auto15.PNG" />
+            <img class="medium_screen" src="static/auto14.PNG" />
+            <img class="screen" src="static/auto8.PNG" />
+        </p>
+    </div>
+
     <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/es13_MySQL_Concessionaria" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
     <div id="footer">
         <span><a class="menu" href="index.html">HOME</a></span>
