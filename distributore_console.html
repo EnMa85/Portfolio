@@ -35,11 +35,11 @@
             color: #191919;
             }
         .screen {
-            width: 80%;
+            width: 82%;
             float: right;
             }
         .medium_screen {
-            width: 60%;
+            width: 50%;
             float: right;
             }
         .mini_screen {
@@ -138,7 +138,8 @@
             La struttura si basa su due classi, Conto e Distributore.<br>
             La classe Conto contiene ID univoco e saldo residuo di ogni utente.<br>
             La classe Distributore raccoglie una lista di tutti i conti ed all'interno di essa sono definiti
-            tutti i metodi utilizzati nel progetto.
+            tutti i metodi utilizzati nel progetto.<br><br>
+            La lista delle bevande ed i relativi prezzi sono definiti in un dizionario.
         </p>
         <p class="margin0">
             <img class="screen" src="static/distrib1.PNG" />
@@ -151,8 +152,8 @@
             verifica che non sia già stato assegnato ad altre chiavette ed inizializza a 0 il saldo.<br><br>
             Quando l'utente si logga, il suo ID viene salvato in una variabile per essere passato ai vari metodi.<br>
             La lista di bevande è definita in un dizionario contenente nome e prezzo.<br><br>
-            Il metodo Eroga riceve come parametro il dizionario, l'id dell'utente attivo ed il codice della bevanda
-            che l'utente ha selezionato tra le opzioni di scelta.<br><br>
+            Il metodo Eroga riceve come parametro il dizionario delle bevande, l'id dell'utente attivo ed il 
+            codice della bevanda che l'utente ha selezionato tra le opzioni di scelta.<br><br>
             Con due cicli for annidati viene agganciato il conto dell'utente attivo, viene identificato il prezzo della
             bevanda e viene verificato il saldo disponibile.<br>Se il credito è sufficiente viene erogata la bevanda e
             viene scalato il prezzo dal saldo.<br>Per simulare la durata dell'erogazione in corso è stata utilizzata la
@@ -166,14 +167,15 @@
     <div class="row">
         <p class="descr">
             La main si sviluppa su due cicli While.<br><br>
-            Il primo ciclo chiede all'utente se vuole loggarsi o se vuole attivare una nuova chiavetta e si ripete fino
-            a quando non viene effettuato con successo il login, visualizzando un messaggio di errore in caso di esito
-            negativo.<br><br>
+            Il primo ciclo chiede all'utente se vuole loggarsi o se vuole attivare una nuova chiavetta.br>
+            Se l'utente crea un nuovo ID, dopo la creazione viene direzionato direttamente al login.<br>
+            Il ciclo si ripete fino a quando il login non viene effettuato con successo, visualizzando un messaggio di errore 
+            in caso di esito negativo.<br><br>
             A login effettuato viene attribuito True ad una variabile booleana.<br>
             Il secondo While visualizza un nuovo elenco di opzioni e parte solo se questa variabile ha valore positivo.<br><br>
             Qui l'utente può scegliere di visualizzare il saldo, effettuare una ricarica, ordinare una bevanda o disconnettersi.<br>
-            Se sceglie di ordinare, verrà stampato il dizionario delle bevande disponibili con il relativo prezzo e
-            l'utente potrà selezionarle tramite il numero progressivo assegnato alla bevanda.<br><br>
+            Se sceglie di ordinare, verrà stampato il dizionario delle bevande disponibili con il relativo prezzo e l'utente potrà 
+            selezionarle tramite il numero progressivo assegnato alla bevanda.<br><br>
             Il ciclo si ripeterà fino a quando l'utente non seleziona l'opzione per terminare.
         </p>
         <p class="margin0">
