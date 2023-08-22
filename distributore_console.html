@@ -38,10 +38,6 @@
             width: 80%;
             float: right;
             }
-        .screen2 {
-            width: 74%;
-            float: right;
-            }
         .medium_screen {
             width: 60%;
             float: right;
@@ -142,19 +138,17 @@
             La struttura si basa su due classi, Conto e Distributore.<br>
             La classe Conto contiene ID univoco e saldo residuo di ogni utente.<br>
             La classe Distributore raccoglie una lista di tutti i conti ed all'interno di essa sono definiti
-            tutti i metodi utilizzati nel progetto.<br><br>
-            Il metodo Nuovo_id abilita una nuova chiavetta associandogli un ID di 5 cifre generato in maniera casuale,
-            verifica che non sia già stato assegnato ad altre chiavette ed inizializza a 0 il saldo.<br><br>
-            Con il metodo Versamento l'utente può scegliere la cifra da versare e con Saldo visualizza il residuo sul conto.
+            tutti i metodi utilizzati nel progetto.
         </p>
         <p class="margin0">
-            <img class="screen2" src="static/distrib1.PNG" />
-            <img class="screen2" src="static/distrib7.PNG" />
+            <img class="screen" src="static/distrib1.PNG" />
         </p>
     </div>
 
     <div class="row">
         <p class="descr">
+            Il metodo Nuovo_id abilita una nuova chiavetta attribuendogli un ID di 5 cifre generato in maniera casuale,
+            verifica che non sia già stato assegnato ad altre chiavette ed inizializza a 0 il saldo.<br><br>
             Quando l'utente si logga, il suo ID viene salvato in una variabile per essere passato ai vari metodi.<br>
             La lista di bevande è definita in un dizionario contenente nome e prezzo.<br><br>
             Il metodo Eroga riceve come parametro il dizionario, l'id dell'utente attivo ed il codice della bevanda
@@ -183,10 +177,14 @@
             Il ciclo si ripeterà fino a quando l'utente non seleziona l'opzione per terminare.
         </p>
         <p class="margin0">
-            <img class="mini_screen" src="static/distrib8.PNG" />
-            <img class="medium_screen" src="static/distrib3.PNG" />
-            <img class="screen2" src="static/distrib4.PNG" />
+            <img class="screen" src="static/distrib3.PNG" />
+            <img class="screen" src="static/distrib4.PNG" />
         </p>
+    </div>
+
+    <div class="row">
+        <img class="medium_screen" src="static/distrib7.PNG" />
+        <img class="medium_screen" src="static/distrib8.PNG" />
     </div>
 
     <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/es06_Distributore" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
