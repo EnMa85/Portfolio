@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione magazzino</title>
+    <style>
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+            padding: auto;
+            width: 100%;
+            text-align: center;
+            font-family: Calibri;
+            color: #191919;
+            margin: auto;
+            margin-top: 1%;
+            }
+        .menu {
+            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
+            color: #191919;
+            font-weight: bold;
+            border-radius: 3px 7px;
+            padding: 5px 7px 5px 7px;
+            border: 2px solid black;
+            font-size: 1.6vw;
+            }
+        body {
+            background-color: #dfc6bb;
+            background-size: cover;
+            background-image: url("https://media.istockphoto.com/id/1133122481/it/vettoriale/elegante-sfondo-bianco-con-linee-lucide.jpg?s=612x612&w=0&k=20&c=3uavECrUhBcLOVchgAIL1U17bKJofy_5T0GvQx9Oetg=");
+            font-size: 40px;
+            }
+        h2 {
+            color: #191919;
+            }
+        .screen {
+            width: 90%;
+            float: right;
+            }
+        .medium_screen {
+            width: 45%;
+            float: right;
+            padding: 0.5%;
+            display: table-cell;
+            vertical-align: middle;
+            }
+        .margin0 {
+            display: table;
+            }
+        .descr {
+            width: 30%;
+            font-size: 1.4vw;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            margin: auto;
+            position: relative;
+            left: 3%;
+            }
+        .row, .row2 {
+            background-image: url("https://st4.depositphotos.com/7269304/20245/i/450/depositphotos_202452090-stock-photo-white-background-with-paper-texture.jpg");
+            border-radius: 3px 7px;
+            padding: 2%;
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            border: 3px solid #191919;
+            width: 85%;
+            display: table;
+            display-content: center;
+            }
+        .row2 {
+            padding: 0.5% 1.5% 0.5% 1.5%;
+            }
+        #footer {
+            margin-bottom: 1%;
+            }
+        @media screen and (max-width: 768px) {
+        * {
+           width: 100%;
+            }
+        .row, .row2 {
+            display: inline-block;
+            width: 90%;
+            margin: auto;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            padding: 4%;
+            }
+        .row2 {
+            font-size: 2.7vw;
+            padding: 1.5%;
+            }
+        .descr {
+            width: 80%;
+            font-size: 2.5vw;
+            text-align: center;
+            padding-top: 3%;
+            position: relative;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            }
+        body {
+            font-size: 3vw;
+            margin-top: 3%;
+            }
+        .menu {
+            font-size: 2.4vw;
+            }
+        .screen {
+            display-content: center;
+            width: 100%;
+            padding: 1%;
+            }
+        .medium_screen {
+            width: 50%;
+            padding: 1%;
+            }
+        .margin0 {
+            margin-top: 3%;
+            }
+        #footer {
+            margin-top: 4%;
+            margin-bottom: 3%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Gestione magazzino</h2>
+    <div class="row">
+        <p class="descr">
+            Il progetto gestisce il magazzino di un negozio.<br><br>
+            All'avvio del programma, l'operatore inserisce le sue credenziali accede alla pagina principale.<br><br>
+            La home è suddivisa in tre sezioni: Gestione prodotti, Gestione ordini e Pagina notifiche.
+        </p>
+        <p class="margin0">
+            <img class="medium_screen" src="static/index.PNG" />
+            <img class="medium_screen" src="static/login.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            Il sistema verifica le credenziali ed in caso di esito negativo invia un alert con un messaggio d'errore.
+            Se sono valide, chiama la funzione save_login e salva i dati di accesso in una tabella Mysql, contenenete
+            nome dell'utente ed orario di login.<br><br>
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/code1.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            La pagina prodotti permette di aggiungere, modificare, eliminare prodotti nel database e di stampare la
+            lista aggiornata in formato tabella.<br><br>
+            Nella stampa della lista, se un prodotto non è disponibile, la riga viene evidenziata in rosso.
+        </p>
+        <p class="margin0">
+            <img class="medium_screen" src="static/lista_prodotti.PNG" />
+            <br><img class="medium_screen" src="static/code2.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            La sezione ordini permette di registrare gli ordini ricevuti e visualizzarne l'elenco.<br><br>
+            In fase di inserimento ordine, il sistema controlla che il codice prodotto sia corretto e che la quantità in
+            stock sia sufficiente a coprire l'ordine.<br><br>
+            In caso di esito positivo registra l'ordine in database, aggiorna la quantità nella tabella prodotti e
+            genera un codice a 5 cifre per la spedizione.
+            Se non va a buon fine, annulla l'inserimento dell'ordine e visualizza nella label un messaggio d'errore.
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/code3.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            Visualizzando l'elenco ordini, l'utente può salvare in PDF la lista generata.<br><br>
+            Cliccando sul bottone "Salva lista" viene chiamata la funzione Salva_reportlab_pdf alla quale vengono passati
+            come parametri l'elenco degli ordini, il titolo del file ed il bottone stesso, che cambierà testo in
+            "Lista salvata" una volta effettuato il salvataggio.<br><br>
+            Per la creazione del file, la formattazione ed il salvataggio si fa uso della libreria Reportlab.
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/salva_lista.PNG" />
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="descr">
+            Infine, nella sezione notifiche, è possibile visualizzare l'elenco degli eventi rilevanti, quali la
+            registrazione di un nuovo ordine o il carico di un nuovo stock di merce.<br><br>
+            La funzione Notify viene chiamata in caso di determinati eventi ed insieme alla descrizione dell'evento salva
+            anche la data e l'orario in cui si è verificato.<br><br>
+            L'elenco è stampato a video in una nuova finestra, tramite una list_box ed una scrollbar.
+        </p>
+        <p class="margin0">
+            <img class="screen" src="static/notifiche.PNG" />
+        </p>
+    </div>
+
+    <h6 class="row2"><a href="https://github.com/EnMa85/Esercizi_Python/blob/main/Esercitazione_Talentform" target="_blank" style="color:#000000">Vai alla pagina del progetto</a></h6>
+    <div id="footer">
+        <span><a class="menu" href="index.html">HOME</a></span>
+        <span><a class="menu" href="flask.html">Portfolio FLASK</a></span>
+        <span><a class="menu" href="tkinter.html">Portfolio TKINTER</a></span>
+        <span><a class="menu" href="console.html">Portfolio CONSOLE</a></span>
+    </div>
+</body>
+</html>
