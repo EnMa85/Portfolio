@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I miei progetti</title>
+---
+layout: base.html
+---
+<title>Portofolio EnMa</title>
     <style>
-        * {
-            text-decoration: none;
-            width: 100%;
-            text-align: center;
-            font-family: Calibri;
-           }
         body {
             background-image: url("https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80");
             background-size: cover;
@@ -35,7 +27,7 @@
             display: flex;
             font-size: 4.1vw;
             }
-        .block1,.block2,.block3 {
+        .index_block {
             box-shadow: 10px 10px 7px 7px #191919;
             background-color: #D4B2A2;
             background-image: url("https://img.freepik.com/premium-photo/recycled-white-paper-texture-background-vintage-banner-wallpaper_118047-9093.jpg?w=1380");
@@ -46,35 +38,23 @@
             padding: 2%;
             margin-bottom: 5%;
             }
-        .block1 {
+        #block1 {
             position: relative;
             right: 18%;
             display: inline-block;
             }
-        .block2 {
+        #block2 {
             position: relative;
             left: 18%;
             display: inline-block;
             }
-        .block3 {
+        #block3 {
             position: relative;
             left: 35%;
             margin-top: -21%;
             display: flex;
             }
-        .menu {
-            background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
-            color: #191919;
-            font-weight: bold;
-            border-radius: 3px 7px;
-            padding: 5px 7px 5px 7px;
-            border: 2px solid black;
-            font-size: 1.5vw;
-            }
         @media screen and (max-width: 768px) {
-        * {
-            width: 98%;
-            }
         .title {
             width: 90%;
             font-size: 7.5vw;
@@ -88,10 +68,7 @@
         .logo {
             margin: auto;
             }
-        .menu {
-            font-size: 2.4vw;
-            }
-        .block1,.block2,.block3 {
+        .index_block {
             margin-right: 0%;
             margin-left: 0%;
             right: 0%;
@@ -107,33 +84,28 @@
 </head>
 <body>
     <div id="header">
-        <h1 class="title">&emsp;I miei progetti&emsp;<img class="logo" src="static/logoGitHub.png" /></h1>
+        <h1 class="title">&emsp;Progetti EnMa&emsp;<img class="logo" src="static/logoGitHub.png" /></h1>
     </div>
-    <div class="block1"><a href="flask.html" style="color:#000000">
+    <div class="index_block" id="block1"><a href="flask.html" style="color:#000000">
         <strong>WEB APPS</strong><br><br>
         La sezione raccoglie una serie di applicazioni web implementate in Python (tramite il framework Flask) o in PHP.<br><br>
         Entrambe le tipologie utilizzano elementi di JS, HTML e CSS e fanno uso di librerie dedicate per la gestione di mail, creazione file, elaborazione grafici.<br>
     </a></div>
 
-    <div class="block2"><a href="tkinter.html" style="color:#000000">
+    <div class="index_block" id="block2"><a href="tkinter.html" style="color:#000000">
         <strong>PYTHON GUI</strong><br><br>
         La sezione raccoglie i programmi implementati con le interfacce grafiche Tkinter.<br><br>
         Sono sviluppati in Python, utilizzando MySQL ed i files pickle per la gestione dei dati e la libreria matplotlib
         per l'elaborazione di grafici.<br>
     </a></div>
 
-    <div class="block3"><a href="console.html" style="color:#000000">
+    <div class="index_block" id="block3"><a href="console.html" style="color:#000000">
         <strong>PYTHON CONSOLE</strong><br><br>
         La sezione raccoglie i programmi Python per console.<br><br>
         Sono sviluppati ad oggetti e sfruttano le classi ed i principali metodi per la manipolazione di stringhe e liste.<br>
         Vengono utilizzate le librerie pickle, time, matplotlib.<br>
     </a></div>
-    <div id="footer">
-        <hr>
-        <span><a class="menu" href="index.html">HOME</a></span>
-        <span><a class="menu" href="flask.html">Portfolio FLASK</a></span>
-        <span><a class="menu" href="tkinter.html">Portfolio TKINTER</a></span>
-        <span><a class="menu" href="console.html">Portfolio CONSOLE</a></span>
-    </div>
+    <hr>
+    {% include footer.html %}
 </body>
 </html>
