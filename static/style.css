@@ -81,13 +81,14 @@ body {
         right: 0%;
         left: 0%;
         margin: auto;
-        padding: 7px 0px 2px 0px;
+        padding: 15px 0px 2px 0px;
     }
     .logo {
         margin: auto;
     }
     .menu {
         font-size: 2.4vw;
+        width: 60%;
     }
     .index_block {
         margin-right: 0%;
