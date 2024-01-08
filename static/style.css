@@ -3,7 +3,6 @@
     text-align: center;
     font-family: Calibri;
     color: #191919;
-    height: 100vh;
 }
 .menu {
     background-image: url("https://img.freepik.com/free-photo/cream-grunge-wall-textured_53876-95485.jpg?w=996&t=st=1690531774~exp=1690532374~hmac=278aaffb633f8caf673bff6f7effb47547d60965f8457ea2ba84864d5c79e20c");
@@ -70,9 +69,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    * {
-        width: 98%;
-    }
     .title {
         width: 85%;
         font-size: 8vw;
