@@ -91,7 +91,7 @@ body {
     .menu {
         font-size: 2.4vw;
     }
-    .index_block {
+    #block1, #block2, #block3 {
         margin-right: 0%;
         margin-left: 0%;
         right: 0%;
