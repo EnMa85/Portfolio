@@ -2,35 +2,30 @@
 layout: index_base.html
 ---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio EnMa</title>
-    <link rel="stylesheet" href="styles/index_style.css" />
-    <style>
-        #block1 {
-            position: relative;
-            right: 18%;
-            display: inline-block;
+<style>
+    #block1 {
+        position: relative;
+        right: 18%;
+        display: inline-block;
+    }
+    #block2 {
+        position: relative;
+        left: 18%;
+        display: inline-block;
+    }
+    #block3 {
+        margin: -17% auto auto;
+        display: flex;
+    }
+    @media screen and (max-width: 768px) {
+        #block1, #block2, #block3 {
+            right: 0;
+            left: 0;
+            margin: 5% auto;
         }
-        #block2 {
-            position: relative;
-            left: 18%;
-            display: inline-block;
-        }
-        #block3 {
-            margin: -17% auto auto;
-            display: flex;
-        }
-        @media screen and (max-width: 768px) {
-            #block1, #block2, #block3 {
-                right: 0;
-                left: 0;
-                margin: 5% auto;
-            }
-        }
-    </style>
-</head>
+    }
+</style>
+   
 <body class="index_body">
     <div id="header">
         <h1 class="title">&emsp;Progetti EnMa&nbsp;<img class="logo" src="static/logoGitHub.png" /></h1>
