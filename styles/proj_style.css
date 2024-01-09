@@ -33,6 +33,7 @@ body {
 }
 .margin0 {
     margin: 0%;
+    display: table;
 }
 .screen {
     width: 80%;
