@@ -3,18 +3,27 @@ layout: project_base
 title: Supermercato
 ---
 
-    <style>
-        .medium_screen {
-            float: right;
-            position: relative;
-            right: 10%;
-}
-        .mini_screen {
-            width: 30%;
-            margin: auto;
-            vertical-align: middle;
-        }
-    </style>
+<style>
+    .medium_screen {
+        float: right;
+        position: relative;
+        right: 10%;
+    }
+    .mini_screen {
+        width: 30%;
+        margin: auto;
+        vertical-align: middle;
+    }
+@media screen and (max-width: 768px) {
+    .screen, .mini_screen, .medium_screen {
+        display-content: center;
+        width: 100%;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        padding: 5%;
+    }
+</style>
 
     <h2>Supermercato</h2>
 
