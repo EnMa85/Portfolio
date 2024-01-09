@@ -115,10 +115,10 @@ title: Concessionaria
 
     <div class="row">
         <p class="descr">
-            Infine, la funzione Stampa_statistiche elabora quattro diversi grafici con la libreria Matplotlib.<br><br>
+            Infine, Stampa_statistiche elabora quattro diversi grafici con Matplotlib.<br><br>
 
-            Per calcolare i dati delle vendite suddivisi per cliente, viene prima creata una lista di tutti i clienti
-            che hanno acquistato pescandoli dalla tabella delle vendite (il ciclo verifica se il cliente non sia già
+            Per calcolare i dati delle vendite suddivisi per cliente, viene prima creata una lista di tutti gli acquirenti
+            pescandoli dalla tabella delle vendite (il ciclo verifica se il cliente non sia già
             presente in lista, per evitare doppioni).<br>
             Successivamente, due cicli FOR annidati scorrono questa lista e per ogni cliente pescano e sommano tutte 
             le celle Prezzo delle vendite a lui associate.<br>
@@ -126,10 +126,10 @@ title: Concessionaria
             stessa sequenza della lista clienti per cui, allo stesso indice avremo in una lista il cliente e nell'altra 
             il totale speso.<br><br>
 
-            Per calcolare le vendite suddivise per auto, vengono pescate e salvate in una lista tutte le vendite relative
+            Per calcolare le vendite suddivise per auto, vengono raggruppate in una lista tutte le vendite relative
             ad una marca.<br>
-            Successivamente viene fatta scorrere la lista creata sommando tutta la colonna Prezzo.<br>
-            Questo passaggio andrà fatto per ogni marca ed i totali per auto ottenuti verrano inseriti nella lista "val"
+            Successivamente viene fatta scorrere la lista creata sommando la colonna Prezzo.<br>
+            Ciò andrà fatto per ogni marca ed i totali per auto ottenuti verrano inseriti nella lista "val"
             che sarà la base numerica per la creazione del grafico.<br><br>
 
             Per ogni tipo di dato (vendite per cliente e vendite per marca) verranno elaborati un grafico a torta ed un istogramma.
@@ -137,7 +137,6 @@ title: Concessionaria
         <p class="margin0">
             <img class="medium_screen" src="static/auto22.PNG" />
             <img class="medium_screen" src="static/auto14.PNG" />
-            <br>
             <img class="screen" src="static/auto8.PNG" />
         </p>
     </div>
