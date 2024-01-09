@@ -5,38 +5,49 @@ title: Gestione magazzino
 
 <style>
    .screen {
-            width: 70%;
-            float: right;
-            margin-right: 7%;
-         }
-        .medium_screen {
-            width: 45%;
-            float: right;
-            padding: 0.5%;
-            display: table-cell;
-            vertical-align: middle;
-         }
-        .mini_screen {
-            width: 40%;
-            float: right;
-            padding: 0.5%;
-            display: table-cell;
-            vertical-align: middle;
-         }
-        .margin0 {
-            display: table;
-         }
-    @media screen and (max-width: 768px) {
-       .medium_screen {
-            width: 50%;
-            padding: 1%;
-            }
-
-         .mini_screen {
-            width: 45%;
-            padding: 1%;
-            float: left;
-            }
+      width: 70%;
+      float: right;
+      margin-right: 7%;
+   }
+  .medium_screen {
+      width: 45%;
+      padding: 0.5%;
+      display: table-cell;
+   }
+  .mini_screen {
+      width: 40%;
+      float: right;
+      padding: 0.5%;
+      display: table-cell;
+   }
+  .descr {
+      width: 34%;
+      left: 2%;
+   }
+  .margin0 {
+      display: table;
+   }
+   @media screen and (max-width: 768px) {
+      .medium_screen {
+         width: 50%;
+         padding: 1%;
+         margin: auto;
+      }
+      .mini_screen {
+         width: 45%;
+         padding: 1%;
+         float: left;
+         margin: auto;
+      }
+      .screen {
+        display-content: center;
+        width: 100%;
+        position: relative;
+        right: 0%;
+        left: 0%;
+        padding: 5%;
+    }
+   }
 </style>
 
     <h2>Gestione magazzino</h2>
