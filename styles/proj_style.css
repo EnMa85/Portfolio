@@ -36,16 +36,19 @@ body {
 }
 .screen {
     width: 80%;
+    display: table-cell;
     vertical-align: middle;
     float: right;
 }
 .medium_screen {
     width: 60%;
+    display: table-cell;
     vertical-align: middle;
     float: right;
 }
 .mini_screen {
     width: 46%;
+    display: table-cell;
     vertical-align: middle;
 }
  .descr {
