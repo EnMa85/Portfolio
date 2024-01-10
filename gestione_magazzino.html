@@ -83,12 +83,12 @@ title: Gestione magazzino
 
     <div class="row">
         <p class="descr">
-            La sezione ordini permette di registrare gli ordini ricevuti e visualizzarne l'elenco.<br><br>
+            La sezione ordini permette di registrare e visualizzare gli ordini ricevuti.<br><br>
             In fase di inserimento ordine, il sistema controlla che il codice prodotto sia corretto e che la quantità in
             stock sia sufficiente a coprire l'ordine.<br><br>
             In caso di esito positivo registra l'ordine in database, aggiorna la quantità nella tabella prodotti e
-            genera un codice a 5 cifre per la spedizione.
-            Se non va a buon fine, annulla l'inserimento dell'ordine e visualizza nella label un messaggio d'errore.
+            genera un codice per la spedizione.
+            Se non va a buon fine, annulla l'inserimento e passa alla label un messaggio d'errore.
         </p>
         <p class="margin0">
             <img class="screen" src="static/code3.PNG" />
@@ -99,7 +99,7 @@ title: Gestione magazzino
         <p class="descr">
             Visualizzando l'elenco ordini, l'utente può salvare in PDF la lista generata.<br><br>
             Cliccando sul bottone "Salva lista" viene chiamata la funzione Save_reportlab_pdf alla quale vengono passati
-            come parametri l'elenco degli ordini, il titolo del file ed il bottone stesso, che cambierà testo in
+            l'elenco degli ordini, il titolo del file ed il bottone stesso, che cambierà testo in
             "Lista salvata" una volta effettuato il salvataggio.<br><br>
             Per la creazione del file, la formattazione ed il salvataggio si fa uso della libreria Reportlab.
         </p>
@@ -112,8 +112,8 @@ title: Gestione magazzino
         <p class="descr">
             Infine, nella sezione notifiche, è possibile visualizzare l'elenco degli eventi rilevanti, quali la
             registrazione di un nuovo ordine o il carico di un nuovo stock di merce.<br><br>
-            La funzione Notify viene chiamata in caso di determinati eventi ed insieme alla descrizione dell'evento salva
-            anche la data e l'orario in cui si è verificato.<br><br>
+            La funzione Notify viene chiamata in caso di determinati eventi e salva descrizione, la data e l'orario
+            in cui si è verificato.<br><br>
             L'elenco è stampato a video in una nuova finestra, tramite una list_box ed una scrollbar.
         </p>
         <p class="margin0">
