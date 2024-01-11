@@ -7,7 +7,7 @@
     font-family: Calibri;
     color: #191919;
     margin: auto;
-    }
+}
 #footer_menu {
     margin: 1% auto;
     padding: 1% 0;
@@ -49,6 +49,14 @@ body {
     padding: 10px 0px 7px 0px;
     display: flex;
     font-size: 4vw;
+}
+}
+.row {
+    margin: auto;
+    display: flex;
+    width: 85%;
+    justify-content: center;
+    align-content: center;
 }
 .index_block {
     box-shadow: 10px 10px 7px 7px #191919;
