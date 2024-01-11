@@ -68,7 +68,8 @@ body {
     background-repeat: no-repeat;
     border: 2px solid #191919;
     border-radius: 5px 5px;
-    width: 25vw;
+    width: 25%;
+    height: 21%;
     font-size: 2vw;
     color: #191919;
     margin: auto;
