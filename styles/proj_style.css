@@ -76,7 +76,7 @@ body {
 .row2 {
     padding: 0.5% 1.5% 0.5% 1.5%;
 }
-.row_video {
+#video.row {
     padding: 0;
 }
 #footer_menu {
