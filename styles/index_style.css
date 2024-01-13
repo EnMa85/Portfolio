@@ -80,7 +80,7 @@ body {
 @media screen and (max-width: 768px) {
     .title {
         width: 85%;
-        font-size: 8.5vw;
+        font-size: 8vw;
         margin-right: 0%;
         margin-left: 0%;
         right: 0%;
@@ -92,7 +92,7 @@ body {
         margin: auto;
     }
     h2 {
-        font-size: 4.7vw;
+        font-size: 5vw;
         margin: 6% auto 4%;
     }
     .menu {
