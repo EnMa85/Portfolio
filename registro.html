@@ -111,7 +111,7 @@ title: Registro Presenze
 
 <div class="row">
     <p class="descr">
-        La pagina register.php, solo in caso di lezione in corso, mostra l'elenco degli studenti
+        La pagina register.php mostra, solo in caso di lezione in corso, l'elenco degli studenti
         e prevede 2 radio buttons, assente/presente.<br>
         Se la spunta è in posizione opposta rispetto alla predefinita, la funzione JavaScript 'set_input_field' attiva le 
         caselle 'orario' e 'note' per permettere al docente di inserire la variazione.
@@ -126,10 +126,10 @@ title: Registro Presenze
         Qui vengono gestiti 4 diversi statements MySQL:<br>
         inserimento o aggiornamento dello stato, inserimento o aggiornamento dell'assenza.
         <br><br>
-        Tutti gli stati inziali della radio box vengono salvati temporaneamente, ed aggiornati in caso di variazione,  nella tabella 'stato_presenze', 
-        per facilitare la gestione delle uscite e dei rientri all'interno della stessa lezione.<br>
-        Nella tabella'registro_assenze' vengono invece inseriti data, orario e note delle sole assenze, aggiornando l'orario di fine dell'assenza
-        precedentemente inserita in caso di rientro del corsista.
+        Tutti gli stati della radio box vengono salvati temporaneamente, o aggiornati in caso di variazione, nella tabella 'stato_presenze'
+        per facilitare la gestione delle uscite e dei rientri all'interno della stessa lezione.<br><br>
+        Nella tabella 'registro_assenze' vengono inseriti i dati delle sole assenze.<br>
+         Ora di inizio e note sono richieste all'utente. L'ora di fine verrà invece automaticamente impostata con l'ora di fine lezione ed in caso di rientro del corsista, la riga verrà aggiornata con l'effettivo orario di rientro.
         <br><br>
         Ad ogni reload di pagina viene ricaricato e mostrato l'ultimo stato dei corsisti con orario e annotazione dell'eventuale ultima variazione.
     </p>
