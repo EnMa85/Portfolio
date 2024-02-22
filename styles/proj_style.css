@@ -14,7 +14,7 @@
     padding: 1% 0;
 }
 .menu {
-    background-image: url("./static/sfondo_crema.avif");
+    background-image: url('./static/sfondo_crema.avif');
     color: #191919;
     font-weight: bold;
     border-radius: 3px 7px;
