@@ -151,16 +151,13 @@ header {
 }
 #proj-card h3 {
     font-size: 1.5rem;
-    color: var(--title);
 }
 #proj-card img {
     width: 100%;
     height: 20rem;
-    object-fit: cover;
 }
-.card a {
-    font-weight: 400;
-    font-size: 1rem;
+#proj-card a {
+    
 }
 /* ---- End Project Cards ----------------------------------------------------------------------------------------------*/
 
@@ -178,7 +175,7 @@ header {
     }
     header.flex100 {
         flex-direction: column-reverse;
-        /* height: fit-content; */
+        height: fit-content;
         padding: 0;
         margin: 0.5% 0 0;
     }
@@ -203,6 +200,9 @@ header {
     .card p, #proj-card p {
         text-align: center;
     }
+    #proj-card img {
+        height: 15rem;
+    }
 }
 
 
@@ -212,7 +212,7 @@ header {
     }
     .card, #proj-card {
         width: 90%;
-        margin: 7% auto;
+        margin: 4% auto 5%;
         padding: 2rem 1rem;
     }
 }
