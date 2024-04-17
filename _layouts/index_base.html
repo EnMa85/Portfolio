@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="../css/index-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="title" class="flex100">
+        <h1>{{ page.title }}</h1>
+    </div>
+
+    <header class="flex100">
+
+        <div id="menu">
+            <a href="../index.html">Home</a>
+            <a href="">Java</a>
+            <a href="../templates/php.html">PHP</a>
+            <a href=".html">Python</a>
+            <a href=".html">Su di me</a>
+        </div>
+    
+        <div class="carousel">
+            <picture class="active">
+                <source media="(min-width:1024px)" alt="languages" srcset="../img/carousel/max1.PNG">
+                <img alt="languages" srcset="../img/carousel/min1.PNG">
+            </picture>
+            <picture>
+                <source media="(min-width:1024px)" alt="technologies" srcset="../img/carousel/max2.PNG">
+                <img alt="technologies" srcset="../img/carousel/min2.PNG">
+            </picture>
+            <picture>
+                <source media="(min-width:1024px)" alt="principles and patterns" srcset="../img/carousel/max3.PNG">
+                <img alt="principles and patterns" srcset="../img/carousel/min3.PNG">
+            </picture>
+        </div>
+
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+</body>
+</html>
