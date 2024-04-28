@@ -1,2 +1,2 @@
-# MyProjects
-Collection of my projects in various programming languages.
+# Portfolio
+Presentation of my projects in various programming languages.
