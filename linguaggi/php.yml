@@ -1,0 +1,16 @@
+layout: index_base
+title: Progetti PHP
+cards:
+  - title: Analisi di bilancio
+    image: ../img/card-progetti/bilanci.PNG
+    content: Web app che analizza bilanci ed incorpora anche un blog.
+            <br>
+            Segue uno schema MVC object oriented.
+    link: ../linguaggi/php.html
+    type: proj-card card
+  - title: Registro presenze
+    image: ../img/card-progetti/registro.PNG
+    content: Web app che gestisce il registro elettronico di una scuola online, offrendo anche una serie di 
+             funzionalità utili al docente.
+    link: ../progetti/registro.html
+    type: proj-card card

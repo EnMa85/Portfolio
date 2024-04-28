@@ -1,0 +1,53 @@
+layout: index_base
+title: Progetti Python
+cards1:
+  - title: Agenzia immobiliare
+    image: ../img/card-progetti/immobiliare.PNG
+    content: Web app Flask gestisce il sito di un'agenzia immobiliare permettendo all'utente di inserire 
+             i propri annunci ed al gestore di approvarli.
+    link: /
+    type: proj-card card
+  - title: Ristorante
+    image: ../img/card-progetti/ristorante.PNG
+    content: Web app Flask gestisce gli ordini di un ristorante ed implementa anche un'area statistiche per il gestore.
+    link: /
+    type: proj-card card
+  - title: Supermercato
+    image: ../img/card-progetti/supermercato.PNG
+    content: Web app Flask che gestisce gli ordini per un supermercato online 
+             ed implementa una sezione utente ed una gestore con reportistica.
+    link: /
+    type: proj-card card
+cards2:
+  - title: Concessionaria
+    image: ../img/card-progetti/concessionaria.PNG
+    content: Web app Flask che gestisce gli ordini per un supermercato online 
+             ed implementa una sezione utente ed una gestore con reportistica.
+    link: /
+    type: proj-card card
+  - title: Gestione magazzino
+    image: ../img/card-progetti/magazzino.PNG
+    content: GUI TKinter per la gestione del magazzino di un negozio.
+    link: /
+    type: proj-card card
+  - title: Bancomat GUI
+    image: ../img/card-progetti/bancomatTkinter.PNG
+    content: GUI Tkinter per la gestione di un bancomat e dei conti dei clienti.
+    link: /
+    type: proj-card card
+cards3:
+  - title: Distributore GUI
+    image: ../img/card-progetti/distributoreTkinter.PNG
+    content: GUI TKinter che simula distributore di bevande gestendo anche le chiavette dei clienti.
+    link: /
+    type: proj-card card
+  - title: Bancomat Console
+    image: ../img/card-progetti/bancomatPython.PNG
+    content: Programma console per la gestione di un bancomat e dei conticorrenti.
+    link: /
+    type: proj-card card
+  - title: Distributore Console
+    image: ../img/card-progetti/distributorePython.PNG
+    content: GUI Tkinter per la gestione di un distributore di bevande e dei conti dei clienti.
+    link: /
+    type: proj-card card
