@@ -6,38 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/index-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/script.js" defer></script>
 </head>
 
 <body>
 
-    <div id="title" class="flex100">
+    <div id="title" class="flexOr">
         <h1>{{ page.title }}</h1>
     </div>
 
-    <header class="flex100">
+    <header class="flexOr">
 
         <div id="menu">
-            <a href="{{ site.baseurl }}/index.html">Home</a>
-            <a href="">Java</a>
-            <a href="{{ site.baseurl }}/templates/php.html">PHP</a>
-            <a href=".html">Python</a>
-            <a href=".html">Su di me</a>
+            <a class="button" href="{{ site.baseurl }}/index.html">Home</a>
+            <a class="button" href="{{ site.baseurl }}/index.html">Java</a>
+            <a class="button" href="{{ site.baseurl }}/linguaggi/php.html">PHP</a>
+            <a class="button" href="{{ site.baseurl }}/linguaggi/python.html">Python</a>
         </div>
     
         <div class="carousel">
             <picture class="active">
-                <source media="(min-width:1024px)" alt="languages" srcset="{{ site.baseurl }}/img/carousel/max1.PNG">
+                <source media="(min-width:720px)" alt="languages" srcset="{{ site.baseurl }}/img/carousel/maxi1.PNG">
                 <source media="(min-width:500px)" alt="languages" srcset="{{ site.baseurl }}/img/carousel/min1.PNG">
                 <img alt="languages" srcset="{{ site.baseurl }}/img/carousel/Cattura.PNG">
             </picture>
             <picture>
-                <source media="(min-width:1024px)" alt="technologies" srcset="{{ site.baseurl }}/img/carousel/max2.PNG">
+                <source media="(min-width:720px)" alt="technologies" srcset="{{ site.baseurl }}/img/carousel/maxi2.PNG">
                 <img alt="technologies" srcset="{{ site.baseurl }}/img/carousel/min2.PNG">
             </picture>
             <picture>
-                <source media="(min-width:1024px)" alt="principles and patterns" srcset="{{ site.baseurl }}/img/carousel/max3.PNG">
+                <source media="(min-width:720px)" alt="principles and patterns" srcset="{{ site.baseurl }}/img/carousel/maxi3.PNG">
                 <img alt="principles and patterns" srcset="{{ site.baseurl }}/img/carousel/min3.PNG">
             </picture>
         </div>
@@ -47,6 +47,17 @@
     <main>
         {{ content }}
     </main>
+
+    <footer class="flexOr">
+        <span>
+            <a href="{{ site.baseurl }}/index.html">Home</a>
+            <a href="">Torna su</a>
+        </span>
+
+        <span>
+            <img src="{{ site.baseurl }}/img/logo.PNG" alt="logo"> EnMa full stack developer
+        </span>
+    </footer>
 
 </body>
 </html>

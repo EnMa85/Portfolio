@@ -1,0 +1,185 @@
+---
+layout: project_base
+title: Registro
+link: https://github.com/EnMa85/PHP_projects/tree/main/registro_presenze
+---
+
+<div class="section">
+    <div class="card">
+            <h3>Demo progetto</h3>
+            <video width="95%" controls autoplay>
+                <source src="{{ site.baseurl }}/img/progetti/registro/register_demo.mp4" type="video/mp4" alt="Demo progetto">
+                Non è possibile riprodurre il video.
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce il registro presenze di una scuola online.
+                <br><br>
+                La pagina di login verifica le credenziali inserite dal docente e la validità del suo account.
+                <br><br>
+                Tramite una variabile di sessione viene tenuta traccia dei tentativi di accesso ed al terzo tentativo errato, 
+                l'account del docente viene invalidato aggiornando l'apposito campo nella tabella 'utenti'.
+                <br><br>
+                I vari logs di errore generati in questa ed altre pagine vengono memorizzati in un file di testo, mentre
+                all'utente viene mostrato un messaggio di errore generico.
+                <br><br>
+                Se la verifica va a buon fine, il docente viene reindirizzato alla pagina di benvenuto.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_check_login.jpg">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                A login effettuato, tutte le pagine includono _base.php e _footer.php come struttura comune.
+                <br><br>
+                _base.php avvia la sessione, imposta i parametri dei cookies, il time-out di attività e ad ogni aggiornamento 
+                verifica in sequenza una serie di condizioni per validare la la sessione e proseguire il caricamento.<br><br>
+                In caso positivo mostra il menù e l'header con data, ora e infomazioni sul docente loggato, altrimenti mostra
+                un messaggio di disconnessione e reindirizza alla pagina di logout.
+                <br><br>
+                Tutte le funzioni chiamate si trovano nelle pagine _function.php e _connection.php (in quest'ultima vi sono 
+                quelle che interagiscono col database).
+                <br><br>
+                Queste funzioni sono implementate seguendo le principali pratiche di sicurezza quali prepared statement, 
+                passaggio variabili con htmlspecialchars e crittografia delle password.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_base.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La pagina welcome.php offre una panoramica su corsi e lezioni del docente. 
+                <br><br>
+    
+                Tramite la query 'next_lesson' ottiene, se presente, la prima occorrenza tra le lezioni in programma
+                e mostra nella sezione sinistra se vi è una lezione in corso o, se programmata, tra quanto inizierà.
+                <br><br>
+                Tramite la query 'get_courses_by_period' e funzioni collegate mostra, nella sezione destra, il 
+                conteggio di tutti i corsi del docente suddivisi per 'attivi', 'terminati' e 'in programmazione.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_welcome.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/registro/register_statistic.jpg">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/registro/register_get_courses.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La pagina register.php mostra, solo in caso di lezione in corso, l'elenco degli studenti
+                e prevede 2 radio buttons, assente/presente.<br>
+                Se la spunta è in posizione opposta rispetto alla predefinita, la funzione JavaScript 'set_input_field' 
+                attiva le caselle 'orario' e 'note' per permettere al docente di inserire la variazione.
+                <br><br>
+                Al primo invio della lezione, la casella orario viene mostrata in sola lettura in quanto è obbligatorio che 
+                coincida con l'orario di inizio lezione.<br>
+                Per gli invii successivi, il sistema effettua un controllo imponendo come limite minimo l'orario dell'ultimo 
+                aggiornamento del registro e come massimo l'ora di fine lezione.
+                <br><br>
+                Il form inviato viene elaborato nella pagina register_sent.php.
+                <br><br>
+                Qui vengono gestiti 4 diversi statements MySQL:<br>
+                inserimento o aggiornamento dello stato, inserimento o aggiornamento dell'assenza.
+                <br><br>
+                Tutti gli stati della radio box vengono salvati temporaneamente, o aggiornati in caso di variazione, nella tabella 
+                'stato_presenze' per facilitare la gestione delle uscite e dei rientri all'interno della stessa lezione.
+                <br><br>
+                Nella tabella 'registro_assenze' vengono inseriti i dati delle sole assenze.<br>
+                Ora di inizio e note sono richieste all'utente. L'ora di fine verrà invece automaticamente impostata con l'ora 
+                di fine lezione ed in caso di rientro del corsista, la riga verrà aggiornata con l'effettivo orario di rientro.
+                <br><br>
+                Ad ogni reload di pagina viene ricaricato e mostrato l'ultimo stato dei corsisti con orario e annotazione 
+                dell'eventuale ultima variazione.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_registro.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_sent_reg.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La pagina calendar.php mostra il calendario delle lezioni programmate ed è possibile salvare la lista in PDF o in XLSX.
+                <br><br>
+                La pagina courses.php mostra i dettagli sui corsi del docente chiamando nuovamente la funzione 'get_courses_by_period' 
+                e la funzione 'create_section'
+                che genera la tabella ed i pulsanti di salvataggio.<br>
+                Anche qui è possibile salvare le liste in PDF e XLSX.
+                <br><br>
+                Le tabelle da salvare vengono elaborate nella pagina save_document.php, che chiama le funzioni 'save_pdf' ed 'export_xlsx'.
+                <br><br>
+                Per la creazione dei documenti sono state utilizzate le librerie Dompdf e PhpSpreadsheet.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_section.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La pagina assistance.php consente al docente di inviare una richiesta compilando un form con oggetto e corpo della mail.<br>
+                Per configurare ed inoltrare la mail viene chiamata la funzione 'send_email' e si fa uso della libreria PHPMailer.
+                <br><br>
+                La pagina logout.php distrugge la sessione in corso e avvisa l'utente dell'avvenuta disconnessione, stampando un messaggio
+                di avviso specifico quando si tratta di disconnessione automatica per perdita della sessione.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_logout1.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_logout2.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Nella directory 'database' sono presenti i file di creazione e compilazione delle tabelle necessarie, suddivisi nei blocchi
+                create.sql, insert.sql e procedures.sql. 
+                <br><br>
+                Le procedures implementate, richiamate in sequenza su insert.sql, automatizzano il processo di inserimento di nuovi elementi:
+                <br><br>
+                'insert_corso' popola la tabella 'info_corsi' con id univoco, date, nome e categoria, calcolandone il monte ore ed associando
+                le chiavi esterne, poi compila la tabella 'lezioni' sulla base della fascia oraria richiesta ed eslcudendo i giorni festivi 
+                prelevati da un'apposita tabella.
+                <br><br>
+                'insert_corsi_per_corsista' prosegue associando al corso una lista di studenti.<br>
+                'insert_corsi_per_docente' e 'insert_lezioni_per_docente', infine, collegano i corsi e le singole lezioni ai vari docenti.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/registro/register_procedure.PNG">
+        </div>
+    </div>
+</div>

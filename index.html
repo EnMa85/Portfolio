@@ -1,121 +1,126 @@
 ---
 layout: index_base
 title: Portfolio Progetti
+cards:
+  - title: Java
+    image: ./img/loghi/logoJava.PNG
+    content: Raccolta di progetti Java suddivisi per tipologia di applicazione.
+            <br><br>
+            Le GUI utilizzano il framework Swing, mentre le WebApp sono implementate
+            con le Servlet oppure con il framework Spring Boot.
+    link: ./linguaggi/php.html
+    type: card
+  - title: Php
+    image: ./img/loghi/logoPhp.PNG
+    content: Raccolta di WebApp implementate in PHP sia nel front-end che nel back-end.
+            <br><br>
+            Sfruttando la versatilità del linguaggio sono state sviluppate in procedurale 
+            o seguendo uno schema OOP.
+    link: ./linguaggi/php.html
+    type: card
+  - title: Python
+    image: ./img/loghi/logoPython.PNG
+    content: Raccolta di progetti Python suddivisi per tipologia di applicazione.
+            <br><br>
+            I progetti GUI sono implementati utilizzando il framework Tkinter, 
+            mentre le WebApp utilizzano Flask.
+    link: ./linguaggi/python.html
+    type: card
 ---
 
-    <div class="flex100">
-        <div class="card">
-            <div>
-                <h3>Java</h3>
-            </div>
-            <div>
-                <img src="{{ site.baseurl }}/img/loghi/logoJava.PNG" alt="logo Java">
-            </div>
-            <p>
-                Raccolta di progetti Java suddivisi per tipologia di applicazione.
-                <br><br>
-                Le GUI utilizzano il framework Swing, mentre le WebApp sono implementate
-                con le Servlet oppure con il framework Spring Boot.
-            </p>
-            <div>
-                <a href="">Vai alla sezione</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <h3>Php</h3>
-            </div>
-            <div>
-                <img src="{{ site.baseurl }}/img/loghi/logoPhp.PNG" alt="logo PHP">
-            </div>
-            <p>
-                Raccolta di WebApp implementate in PHP sia nel front-end che nel back-end.
-                <br><br>
-                Sfruttando la versatilità del linguaggio sono state sviluppate in procedurale 
-                o seguendo uno schema OOP.
-            </p>
-            <div>
-                <a href="{{ site.baseurl }}/templates/php.html">Vai alla sezione</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <h3>Python</h3>
-            </div>
-            <div>
-                <img src="{{ site.baseurl }}/img/loghi/logoPython.PNG" alt="logo Python">
-            </div>
-            <p>
-                Raccolta di progetti Python suddivisi per tipologia di applicazione.
-                <br><br>
-                I progetti GUI sono implementati utilizzando il framework Tkinter, 
-                mentre le WebApp utilizzano Flask.
-            </p>
-            <div>
-                <a href="">Vai alla sezione</a>
-            </div>
-        </div>
-
+<div class="section">
+    <h3>Su di me</h3>
+    
+    <div class="intro card">  
+        <p>
+            Sono appassionata d'informatica ed ho molta esperienza in ambito contabile e gestionale, 
+            durante la quale ho programmato applicativi in Excel per agevolarmi il lavoro.
+            <br><br>
+            Ho deciso di traslare la mia professione nello sviluppo software perchè ho capito che 
+            è l'attività che meglio mi consente di unire le due anime che mi caratterizzano: 
+            quella analitica e quella creativa.
+            <br>
+            Ho quindi dedicato l'ultimo anno allo studio intensivo di Java, PHP, Python, Javascript, HTML e CSS, 
+            sia tramite corsi in sincrono che studiando da sola.
+            <br><br>
+            Nei repository troverete progetti a più livelli ecc ecc
+            Mi piacerebbe poter sfruttare le mie competenze settoriali arrivando a dedicarmi, dopo 
+            un'adeguata pratica, alla progettazione di gestionali aziendali.
+        </p>
     </div>
+</div>
 
+<div class="section">
+    <h3>Progetti in evidenza</h3>
 
-    <div class="flex100">
-
-        <div class="card">
-            <div>
-                <h3>Web Apps</h3>
+    <div class="carousel card">
+        <div class="flexVert">
+            <div class="last-proj">
+                <div class="flexOr">
+                    <button onclick="prevSlide()" id="prevButton">
+                        <img class="arrow" src="{{ site.baseurl }}/img/fr-sx.PNG" alt="Precedente">
+                    </button>
+                    <img src="{{ site.baseurl }}/img/card-progetti/home_bilanci.PNG" alt="anteprima pagina progetto">
+                    <button onclick="nextSlide()" id="nextButton">
+                        <img class="arrow" src="{{ site.baseurl }}/img/fr-dx.PNG" alt="Successivo">
+                    </button>
+                </div>
+                <p>
+                    Web app PHP che effettua l'analisi per indici a partire dai dati di bilancio inseriti dall'utente
+                    e permette di salvare i risultati per visualizzarli nello storico.
+                    <br><br>
+                    In altre sezioni è possibile consultare articoli ed inviare domande allo staff.
+                    <br>
+                    Comprende una sezione amministratore che facilita l'aggiornamento dei contenuti del sito.
+                    <br><br>
+                    E' programmata ad oggetti secondo uno schema MVC e utilizza il Composer per la gestione delle dipendenze.
+                </p>
+                <div>
+                    <a class="button" href="">Vai al progetto</a>
+                </div>
             </div>
-            <div class="img">
-                <img src="{{ site.baseurl }}/img/loghi/webapp.PNG" alt="Web apps">
-            </div>
-            <p>
-                Raccolta di tutti progetti web suddvisi per linguaggio 
-                di programmazione.
-                <br><br>
-                Sono implementati in Java, Python o PHP e fanno tutti 
-                uso di Javascript e CSS.
-            </p>
-            <div>
-                <a href="">Vai alla sezione</a>
+
+            <div class="last-proj">
+                <div class="flexOr">
+                    <button onclick="prevSlide()" id="prevButton">
+                       <img class="arrow" src="{{ site.baseurl }}/img/fr-sx.PNG" alt="Precedente">
+                    </button>
+                    <img src="{{ site.baseurl }}/img/card-progetti/home_registro.PNG" alt="anteprima pagina progetto">
+                    <button onclick="nextSlide()" id="nextButton">
+                       <img class="arrow" src="{{ site.baseurl }}/img/fr-dx.PNG" alt="Successivo">
+                    </button>
+                </div>
+                <p>
+                    Web app PHP che gestisce il registro elettronico di una scuola online.
+                    <br><br>
+                    Offre al docente la possibilità di consultare e scaricare l'elenco dei propri corsi 
+                    ed il calendario delle lezioni, o di inviare un'e-mail all'assistenza tramite un form.
+                    <br><br>
+                    Il progetto include il file MySQL per la creazione delle tabelle, oltre funzioni 
+                    e stored procedures per gestirle.
+                    <br><br>
+                    E' programmato in procedurale e utilizza il Composer per la gestione delle dipendenze.
+                </p>
+                <div>
+                    <a class="button" href="{{ site.baseurl }}/progetti/registro.html">Vai al progetto</a>
+                </div>
             </div>
         </div>
-
-        <div class="card">
-            <div>
-                <h3>GUI</h3>
-            </div>
-            <div class="img">
-                <img src="{{ site.baseurl }}/img/loghi/gui.PNG" alt="Graphical User Interface">
-            </div>
-            <p>
-                Raccolta di tutti progetti implementati con interfacce 
-                grafiche, suddvisi per linguaggio di programmazione.
-                <br><br>
-                Sono implementati utilizzando Java Swing o Python Tkinter.
-            </p>
-            <div>
-                <a href="">Vai alla sezione</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div>
-                <h3>Console</h3>
-            </div>
-            <div class="img">
-                <img src="{{ site.baseurl }}/img/loghi/console.PNG" alt="Terminale Console">
-            </div>
-            <p>
-                Raccolta di tutti progetti eseguibili via console.
-                <br><br>
-                Sono implementati in Python o Java e fanno uso di varie
-                librerie per per l'implementazione di calcoli, grafici, stampe.               
-            </p>
-            <div>
-                <a href="">Vai alla sezione</a>
-            </div>
-        </div>
-
     </div>
+</div>
+
+<div class="section">
+    <h3>Linguaggi</h3>
+    <div class="flexOr">
+        {% for card in page.cards %}
+            {% 
+                include card_base.html 
+                title = card.title 
+                image = card.image
+                content = card.content
+                link = card.link
+                type = card.type
+            %}
+        {% endfor %}
+    </div>
+</div>

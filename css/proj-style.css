@@ -1,0 +1,45 @@
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 2% 0;
+    box-sizing: border-box;
+}
+a.repo {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.par, .screen {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: max-content;
+}
+.par {
+    width: 40%;
+    padding: 0 6%;
+}
+.screen {
+    width: 60%;
+    padding-right: 1%;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.par p {
+    font-size: 1.2vw;
+}
+img.screen-max {
+    width: 100%;
+    height: fit-content;
+}
+img.screen-med {
+    width: 50%;
+    height: fit-content;
+}
+img.screen-min {
+    width: 35%;
+    height: fit-content;
+}

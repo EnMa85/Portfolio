@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="styles/proj_style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/index-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/proj-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/responsive.css">
 </head>
+
 <body>
+
+    <div id="title" class="flexOr">
+        <span>Presentazione progetto</span>
+        <span><h1>{{ page.title }}</h1></span>
+        <span></span>
+    </div>
+
     <main>
         {{ content }}
     </main>
-    <hr>
-    <div id="footer_menu">
-        <span><a class="menu" href="index.html">HOME</a></span>
-        <span><a class="menu" href="flask.html">Portfolio WEBAPP</a></span>
-        <span><a class="menu" href="tkinter.html">Portfolio TKINTER</a></span>
-        <span><a class="menu" href="console.html">Portfolio CONSOLE</a></span>
-    </div>
-    <hr>
+
+    <footer class="flexOr">
+        <span>
+            <a href="{{ site.baseurl }}/index.html">Home</a>
+            <a href="#" onclick="history.back()"> Torna indietro</a>
+        </span>
+
+        <span>
+            <a class="repo" href="{{ page.link }}" target="_blank">Vai al repository</a>
+        </span>
+
+        <span>
+            <img src="{{ site.baseurl }}/img/logo.PNG" alt="logo"> EnMa full stack developer
+        </span>
+    </footer>
+
 </body>
 </html>

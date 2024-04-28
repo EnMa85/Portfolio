@@ -1,0 +1,21 @@
+<div class="{{ include.type }}">
+    <div>
+        <h3>{{ include.title }}</h3>
+    </div>
+
+    <div class="img">
+        <img src="{{ include.image }}" alt="{{ card.title }}">
+    </div>
+
+    <p>
+        {{ include.content }}
+    </p>
+
+    <div>
+        {% if card.type == "proj-card card" %}
+        <a class="button" href="{{ include.link }}">Vai al progetto</a>
+        {% else %}
+        <a class="button" href="{{ include.link }}">Vai alla sezione</a>
+        {% endif %}
+    </div>
+</div>
