@@ -1,5 +1,6 @@
 ---
-{% include php.yml %}
+layout: index_base
+title: Progetti PHP
 ---
 
 <div class="section">
@@ -16,7 +17,7 @@
 
 <div class="section">
     <div class="flexOr">
-        {% for card in page.cards %}
+        {% for card in site.data.php.cards %}
             {% 
                 include card_base.html 
                 title = card.title 

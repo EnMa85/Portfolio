@@ -1,5 +1,6 @@
 ---
-{% include python.yml %}
+layout: index_base
+title: Progetti Python
 ---
 
 <div class="section">
@@ -16,7 +17,7 @@
 
 <div class="section">
     <div class="flexOr">     
-        {% for card in page.cards1 %}
+        {% for card in site.data.python.cards1 %}
             {% 
                 include card_base.html 
                 title = card.title 
@@ -31,7 +32,7 @@
 
 <div class="section">
     <div class="flexOr">
-        {% for card in page.cards2 %}
+        {% for card in site.data.python.cards2 %}
         {% 
             include card_base.html 
             title = card.title 
@@ -46,7 +47,7 @@
 
 <div class="section">
     <div class="flexOr">
-        {% for card in page.cards3 %}
+        {% for card in site.data.python.cards3 %}
         {% 
             include card_base.html 
             title = card.title 

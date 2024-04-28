@@ -1,5 +1,3 @@
-layout: index_base
-title: Progetti Python
 cards1:
   - title: Agenzia immobiliare
     image: ../img/card-progetti/immobiliare.PNG
