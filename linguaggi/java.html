@@ -1,24 +1,25 @@
 ---
 layout: index_base
-title: Progetti Python
+title: Progetti Java
 ---
 
 <div class="section">
     <div class="card">
         <div>
-            <img src="{{ site.baseurl }}/img/loghi/logoPython.PNG" alt="logo Python">
+            <img src="{{ site.baseurl }}/img/loghi/logoJava.PNG" alt="logo Java">
         </div>
         <p>
-            Raccolta di progetti Python suddivisi per tipologia di applicazione.
-
-            I progetti GUI sono implementati utilizzando il framework Tkinter, mentre le WebApp utilizzano Flask. 
+            Raccolta di progetti Java suddivisi per tipologia di applicazione.
+            <br><br>
+            Le GUI utilizzano il framework Swing, mentre le WebApp sono implementate
+            con le Servlet oppure con il framework Spring Boot.
         </p>
     </div>
 </div>
 
 <div class="section">
     <div class="flexOr">     
-        {% for card in site.data.python.cards1 %}
+        {% for card in site.data.java.cards1 %}
             {% 
                 include card_base.html 
                 title = card.title 
@@ -33,7 +34,7 @@ title: Progetti Python
 
 <div class="section">
     <div class="flexOr">
-        {% for card in site.data.python.cards2 %}
+        {% for card in site.data.java.cards2 %}
         {% 
             include card_base.html 
             title = card.title 
@@ -48,7 +49,7 @@ title: Progetti Python
 
 <div class="section">
     <div class="flexOr">
-        {% for card in site.data.python.cards3 %}
+        {% for card in site.data.java.cards3 %}
         {% 
             include card_base.html 
             title = card.title 
