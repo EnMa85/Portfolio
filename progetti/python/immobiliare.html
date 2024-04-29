@@ -1,0 +1,99 @@
+---
+layout: project_base
+title: Agenzia immobiliare
+link: https://github.com/EnMa85/Esercizi_Python/tree/main/es16_Flask_AgenziaImmobiliare
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce il sito di un'agenzia immobiliare.
+                <br><br>
+                Fa uso di database MySQL per il salvataggio dei dati degli appartamenti e delle librerie OS 
+                e Werkzeug per la gestione dei files immagine caricati dagli utenti.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/immobiliare/agScreen1.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il cliente, dopo essersi loggato o registrato nella home, può consultare l'elenco delle
+                case in vendita con le relative foto.
+                <br><br><br>
+                Cliccando sull'apposito pulsante può inserire un proprio annuncio di vendita inserendo una foto 
+                e compilando un form con recapito e dati della casa, che saranno poi salvati in una tabella 
+                provvisoria MySQL ed inviati alla pagina gestore in attesa di essere pubblicati.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-medmin" src="{{ site.baseurl }}/img/progetti/immobiliare/agScreen3.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/immobiliare/agCod6.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                L'immagine viene resa sicura e salvata in una cartella locale rinominandola con un nome univoco,
+                identificato tramite l'ID della tabella.
+                <br><br>
+                Nella tabella MySQL verrà salvato il nome del file.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/immobiliare/agCod2.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La pagina HTML di inserimento annuncio è strutturata in tre sezioni tramite una
+                sequenza di codizioni:
+                <br><br>
+                La prima istanza visualizza il form di caricamento dell'immagine.
+                <br>
+                Se non ci sono errori (per i quali verrebbero passati e stampati dei messaggi di avviso) 
+                viene visualizzata la schermata di conferma caricamento e compare il form per l'inserimento 
+                degli altri dati.
+                <br><br>
+                Infine viene inviata la conferma di inserimento che visualizza l'immagine ed i dati caricati.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-medmin" src="{{ site.baseurl }}/img/progetti/immobiliare/agScreen2.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/immobiliare/agCod4.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il gestore può decidere di pubblicare o rifiutare l'annuncio.
+                <br><br>
+                Se l'annuncio viene rifiutato, l'immagine viene cancellata dalla cartella locale e la riga cancellata 
+                dal database.<br><br>
+                Se l'annuncio viene pubblicato, l'intera riga (escluso l'ID che seguirà la nuova numerazione) 
+                viene passata nella tabella definitiva.
+                <br><br>
+                L'immagine viene rinominata secondo il nuovo ID.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/immobiliare/agCod7.PNG">
+        </div>
+    </div>
+</div>

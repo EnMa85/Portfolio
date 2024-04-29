@@ -1,0 +1,61 @@
+---
+layout: project_base
+title: Distributore GUI Tkinter
+link: https://github.com/EnMa85/Esercizi_Python/blob/main/es07_Tkinter_Distributore
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce un distributore di bevande.
+                <br><br>
+                L'utente deve inserire il suo ID chiavetta oppure crearne uno nuovo e dopo essersi loggato 
+                con le credenziali corrette può scegliere se effettuare una ricarica o selezionare una bevanda.
+                <br><br>
+                Per la generazione di un nuovo ID e di una nuova password è stata utilizzata la libreria Random.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/distributore-tkinter/screenDistributore.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/distributore-tkinter/screenBevande.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto è costruito su due classi.<br>La classe Conto contiene l'ID, il saldo e le credenziali 
+                di ogni utente.
+                <br><br>
+                La classe Distributore raccoglie tutti gli id delle chiavette attive.
+                <br><br>
+                Dentro quest'ultima sono implementati i metodi che agiscono sui dati degli ID, ovvero il versamento e 
+                l'erogazione con relativi aggiornamenti del saldo.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/distributore-tkinter/codeDistribClassi.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Alla fine di ogni erogazione, il display visualizza in automatico il saldo aggiornato direttamente 
+                nella schermata principale.
+                <br><br>
+                I messaggi di avviso invece, come quello di accesso negato e di accesso effettuato, 
+                vengono visualizzati come pop-up sfruttando la libreria messagebox di Tkinter.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/distributore-tkinter/screenErogazione.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/distributore-tkinter/screenAccessoNegato.PNG">
+        </div>
+    </div>
+</div>

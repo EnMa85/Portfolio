@@ -12,11 +12,16 @@ a.repo {
     font-weight: 600;
     font-size: 1.2rem;
 }
-.par, .screen {
+.par, .screen, 
+.project>span {
     display: flex;
     align-items: center;
+    width: 100%;
+    height: fit-content;
     box-sizing: border-box;
-    height: max-content;
+}
+.project>span img {
+    height: auto;
 }
 .par {
     width: 40%;
@@ -29,7 +34,7 @@ a.repo {
     align-content: space-around;
 }
 .par p {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 img.screen-max {
     width: 100%;
@@ -39,7 +44,15 @@ img.screen-med {
     width: 50%;
     height: fit-content;
 }
-img.screen-min {
+img.screen-medmax {
+    width: 60%;
+    height: fit-content;
+}
+img.screen-medmin {
     width: 35%;
+    height: fit-content;
+}
+img.screen-min {
+    width: 25%;
     height: fit-content;
 }

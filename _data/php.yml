@@ -10,5 +10,5 @@ cards:
     image: ../img/card-progetti/registro.PNG
     content: Web app che gestisce il registro elettronico di una scuola online, offrendo anche una serie di 
              funzionalità utili al docente.
-    link: ../progetti/registro.html
+    link: ../progetti/php/registro.html
     type: proj-card card

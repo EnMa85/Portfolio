@@ -1,0 +1,113 @@
+---
+layout: project_base
+title: Gestione magazzino
+link: https://github.com/EnMa85/Esercizi_Python/blob/main/Esercitazione_Talentform
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce il magazzino di un negozio.
+                <br><br>
+                All'avvio, l'operatore inserisce le sue credenziali ed accede alla pagina principale,
+                che è suddivisa in tre sezioni: Gestione prodotti, Gestione ordini e Notifiche.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/magazzino/login.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/magazzino/index.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il sistema verifica le credenziali ed in caso di esito negativo invia un alert con un messaggio d'errore.
+                <br><br>
+                Se sono valide, chiama la funzione save_login e salva i dati di accesso in una tabella Mysql, 
+                contenente il nome dell'utente ed orario di login.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/magazzino/code1.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La pagina prodotti permette di aggiungere, modificare, eliminare prodotti nel database e di stampare 
+                la lista aggiornata in formato tabella.
+                <br><br>
+                Nella stampa della lista, se un prodotto non è disponibile, la riga viene evidenziata in rosso.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/magazzino/lista_prodotti.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/magazzino/code2.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La sezione ordini permette di registrare e visualizzare gli ordini ricevuti.
+                <br><br>
+                In fase di inserimento ordine, il sistema controlla che il codice prodotto sia corretto e che la 
+                quantità in stock sia sufficiente a coprire l'ordine.
+                <br><br>
+                In caso di esito positivo registra l'ordine in database, aggiorna la quantità nella tabella prodotti 
+                e genera un codice per la spedizione.
+                Se non va a buon fine, annulla l'inserimento e passa alla label un messaggio d'errore.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/magazzino/code3.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Visualizzando l'elenco ordini, l'utente può salvare in PDF la lista generata.
+                <br><br>
+                Cliccando sul bottone "Salva lista" viene chiamata la funzione Save_reportlab_pdf alla quale vengono 
+                passati l'elenco degli ordini, il titolo del file ed il bottone stesso, che cambierà testo in
+                "Lista salvata" una volta effettuato il salvataggio.
+                <br><br>
+                Per la creazione del file, la formattazione ed il salvataggio si fa uso della libreria Reportlab.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/magazzino/salva_lista.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Infine, nella sezione notifiche, è possibile visualizzare l'elenco degli eventi rilevanti, 
+                quali la registrazione di un nuovo ordine o il carico di un nuovo stock di merce.
+                <br><br>
+                La funzione Notify viene chiamata in caso di determinati eventi e salva descrizione, 
+                la data e l'orario in cui si è verificato.
+                <br><br>
+                L'elenco è stampato a video in una nuova finestra, tramite una list_box ed una scrollbar.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/magazzino/notifiche.PNG">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+---
+layout: project_base
+title: Ristorante
+link: https://github.com/EnMa85/Esercizi_Python/tree/main/es14_Flask_Ristorante
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce gli ordini di un ristorante ed è suddiviso in sezione cliente 
+                e sezione gestore.
+                <br><br>
+                Il cliente, dopo aver effettuato il login o essersi registrato, può comporre
+                il suo menù tramite una combo selection ed inoltrare l'ordine.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/ristorante/screenMenu.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La struttura è basata su classi contenenti piatto e prezzo ed ogni categoria di piatto è 
+                stata associata ad una lista diversa per agevolare la gestione del menù.
+                <br><br>
+                Le liste dei piatti sono passate alla pagina HTML che tramite un ciclo for sviluppa l'elenco 
+                delle options.
+                <br><br>
+                In tal modo si automatizza il processo di aggiornamento della pagina in seguito a variazioni 
+                dei menù.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/ristorante/codeSelect.PNG">
+            <img class="screen-med" width="" src="{{ site.baseurl }}/img/progetti/ristorante/codeOrdina.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Tutti i dati degli ordini, degli utenti e di sessione vengono gestiti su database MySql.
+                <br><br>
+                Il gestore, nella sua area privata, può visualizzare l'elenco degli ordini ricevuti e scegliere 
+                se accettarli o rifiutarli.
+                <br>
+                Gli ordini rifiutati vengono cancellati dal database degli ordini in corso. 
+                Quelli accettati vengono trasferiti nell'archivio ordini.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-medmin" src="{{ site.baseurl }}/img/progetti/ristorante/screenOrdini.PNG">
+            <img class="screen-medmax" src="{{ site.baseurl }}/img/progetti/ristorante/codeAccetta.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il gestore può inoltre consultare lo storico degli ordini, il totale degli incassi e le
+                statistiche relative alla spesa per cliente ed ai piatti più venduti.
+                <br><br>
+                Per l'elaborazione grafica delle statistiche è stata utilizzata la libreria matplotlib.pyplot.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/ristorante/screenGrafico.PNG">
+        </div>
+    </div>
+</div>

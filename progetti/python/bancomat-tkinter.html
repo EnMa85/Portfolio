@@ -1,0 +1,91 @@
+---
+layout: project_base
+title: Bancomat GUI Tkinter
+link: https://github.com/EnMa85/Esercizi_Python/blob/main/es09_Tkinter_Bancomat_Grafico
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce uno sportello bancomat.
+                <br><br>
+                Dopo aver digitato le credenziali corrette,
+                l'utente accede nella sua area privata e visualizza la lista delle operazioni disponibili.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/screenAccessoNegato.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/screenTkinterMenu.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La struttura presenta una prima classe che raggruppa tutti i dettagli del conto corrente
+                ed una seconda contenente tutti i conti del bancomat.
+                <br><br>
+                All'interno della classe bancomat sono implementate le def che manipolano i dati delle classi.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/codeBancoClassi.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Se l'utente sceglie di prelevare, versare o effettuare un bonifico, si apre una nuova pagina
+                che richiede l'importo e, in caso di bonifico, il destinatario.
+                <br><br>
+                Ad operazione effettuata viene visualizzato il saldo aggiornato.
+                <br><br>
+                Se il destinatario è un cliente della stessa banca, anche il suo saldo viene aggiornato.
+                <br><br>
+                Tutte le variazioni in entrata e uscita vengono salvate nel file picker che contiene tutti i movimenti e
+                dati dei conti.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/screenImporto.PNG">
+            <img class="screen-med" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/screenEffettuata.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/codeBancoDef.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Ogni movimento viene salvato in una lista movimenti che, su richiesta, può essere
+                stampata dall'utente.
+                <br><br>
+                Inoltre, ad ogni operazione vengono aggiornate le variabili per ogni categoria
+                di entrata o di uscita e queste vengono utilizzate per l'elaborazione dei grafici.
+                <br><br>
+                Per i grafici è stata utilizzata la libreria matplotlib.pyplot.
+                <br>
+                Per l'archiviazione dei dati la libreria pickle.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/codeBancoDef2.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <span>
+            <img class="screen-min" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/screenMovimenti.PNG">
+            <img width="65%" src="{{ site.baseurl }}/img/progetti/bancomat-tkinter/screenTkinterGrafici.PNG">
+        </span>
+    </div>
+</div>

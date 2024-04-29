@@ -1,0 +1,93 @@
+---
+layout: project_base
+title: Distributore console
+link: https://github.com/EnMa85/Esercizi_Python/blob/main/es06_Distributore
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce un distributore di bevande.
+                <br><br>
+                La struttura si basa su due classi, Conto e Distributore.
+                <br>
+                La classe Conto contiene ID univoco e saldo residuo di ogni utente.
+                <br>
+                La classe Distributore raccoglie una lista di tutti i conti ed all'interno di essa sono definiti
+                tutti i metodi utilizzati nel progetto.
+                <br><br>
+                La lista delle bevande ed i relativi prezzi sono definiti in un dizionario.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/distributore-console/distrib1.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il metodo Nuovo_id abilita una nuova chiavetta attribuendogli un ID di 5 cifre generato in maniera 
+                casuale, verifica che non sia già stato assegnato ad altre chiavette ed inizializza a 0 il saldo.
+                <br><br>
+                Il metodo Eroga riceve come parametro il dizionario delle bevande, l'id dell'utente attivo ed il 
+                codice della bevanda che l'utente ha selezionato tra le opzioni di scelta.
+                <br><br>
+                Con due cicli for annidati viene agganciato il conto dell'utente attivo, viene identificato il prezzo 
+                della bevanda e viene verificato il saldo disponibile.
+                <br>
+                Se il credito è sufficiente viene erogata la bevanda e viene scalato il prezzo dal saldo.
+                <br>
+                Per simulare la durata dell'erogazione in corso è stata utilizzata la funzione Sleep.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/distributore-console/distrib9.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La main si sviluppa su due cicli While.
+                <br><br>
+                Il primo ciclo chiede all'utente se vuole loggarsi o se vuole attivare una nuova chiavetta.
+                <br>
+                Se l'utente crea un nuovo ID, dopo la creazione viene direzionato direttamente al login.
+                <br>
+                Il ciclo si ripete fino a quando il login non viene effettuato con successo, visualizzando un messaggio 
+                di errore in caso di esito negativo.
+                <br><br>
+                A login effettuato viene attribuito True ad una variabile booleana e l'ID dell'utente attivo viene salvato 
+                in una variabile per essere passato come parametro ai vari metodi.
+                <br><br>
+                Il secondo While visualizza un nuovo elenco di opzioni e parte solo se questa variabile ha valore positivo.
+                <br><br>
+                Qui l'utente può scegliere di visualizzare il saldo, effettuare una ricarica, ordinare una bevanda o disconnettersi.
+                <br>
+                Se sceglie di ordinare, verrà stampato il dizionario delle bevande disponibili con il relativo prezzo e 
+                l'utente potrà selezionarle tramite il numero progressivo assegnato alla bevanda.
+                <br><br>
+                Il ciclo si ripeterà fino a quando l'utente non seleziona l'opzione per terminare.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/distributore-console/distrib3.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/distributore-console/distrib4.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <span>
+            <img width="61.5%" src="{{ site.baseurl }}/img/progetti/distributore-console/distrib7.PNG">
+            <img width="34%" src="{{ site.baseurl }}/img/progetti/distributore-console/distrib8.PNG">
+        </span>
+    </div>
+</div>

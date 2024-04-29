@@ -54,7 +54,7 @@ a {
     color: var(--light-text);
     background-color: var(--title);
 }
-footer.flexOr {
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -66,8 +66,10 @@ footer>span, #title>span {
     width: 15rem;
     margin: 0 3%;
 }
+#title>span>h1 {
+    white-space: nowrap;
+}
 footer>span>a {
-    margin-left: 3%;
     color: var(--light-text);
 }
 footer>span>a:hover {
