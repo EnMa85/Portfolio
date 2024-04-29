@@ -48,7 +48,6 @@
         margin: auto;                 
     }
     #title {
-        padding: 0.7rem;
         font-size: 0.7rem;
     }
     header.flexOr {
@@ -71,8 +70,8 @@
         padding: 0.8%;
     }
     .section {
+        margin: 5% auto;
         width: 80vw;
-        margin: 0 auto;
     }
     .section h3 {
         margin: 0 auto 3%;
@@ -92,17 +91,25 @@
         margin: 0;
         padding: 0;
     }
-    .screen {
+    .project {
+        flex-direction: column;
+        padding: 4% 4% 1%;
+    }
+    .screen, .par {
+        width: 100%;
         padding: 0;
     }
+    .screen>img {
+        width: 100%;
+    }
     .par p {
-        font-size: 1.6vw;
+        font-size: 1.25rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
     :root {
-        font-size: 10px;
+        font-size: 11px;
     }
     .section {
         width: 85vw;
@@ -113,5 +120,9 @@
     }
     .proj-card img {
         height: 14rem;
+    }
+    .project {
+        flex-direction: column;
+        padding: 4% 4% 1%;
     }
 }

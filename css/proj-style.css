@@ -13,14 +13,16 @@ a.repo {
     font-size: 1.2rem;
 }
 .par, .screen, 
-.project>span {
+.project>span,
+.screen>span {
     display: flex;
     align-items: center;
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
 }
-.project>span img {
+.project>span img,
+.screen>span img {
     height: auto;
 }
 .par {
