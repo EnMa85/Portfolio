@@ -46,15 +46,7 @@ img.screen-med {
     width: 50%;
     height: fit-content;
 }
-img.screen-medmax {
-    width: 60%;
-    height: fit-content;
-}
-img.screen-medmin {
-    width: 35%;
-    height: fit-content;
-}
 img.screen-min {
-    width: 25%;
+    width: 35%;
     height: fit-content;
 }
