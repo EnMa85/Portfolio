@@ -10,8 +10,8 @@ $(document).ready(function(){
         var linkPage = linkPath.substring(linkPath.lastIndexOf('/') + 1);
         
         // Assigns class 'active' to the current page button
-        if (linkPage === currentPage) {
-        $(this).addClass('active');
+        if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+            $(this).addClass('active');
         }
     });
 });
@@ -35,8 +35,6 @@ window.addEventListener('DOMContentLoaded', function() {
 // Highlighted projects carousel
 let currentSlide = 0;
 const totalSlides = document.querySelectorAll('.last-proj').length;
-
-console.log("Numero totale di slide nel carosello:", totalSlides); // Stampa il numero totale di slide nella console
 
 function prevSlide() {
     currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
