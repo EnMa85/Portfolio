@@ -35,6 +35,9 @@ window.addEventListener('DOMContentLoaded', function() {
 // Highlighted projects carousel
 let currentSlide = 0;
 const totalSlides = document.querySelectorAll('.last-proj').length;
+
+console.log("Numero totale di slide nel carosello:", totalSlides); // Stampa il numero totale di slide nella console
+
 function prevSlide() {
     currentSlide = (currentSlide === 0) ? totalSlides - 1 : currentSlide - 1;
     updateCarousel();
@@ -45,16 +48,19 @@ function nextSlide() {
 }
 function updateCarousel() {
     const projects = document.querySelectorAll('.last-proj');
-    const prevButton = document.getElementById('prevButton');
-    const nextButton = document.getElementById('nextButton');
+    const prevButtons = document.querySelectorAll('.prevButton');
+    const nextButtons = document.querySelectorAll('.nextButton');
 
-    // If there are no more items in the arrow direction...
-    // changes the opacity of the arrow button 
-    prevButton.style.opacity = (currentSlide === 0) ? 0.2 : 1;  
-    nextButton.style.opacity = (currentSlide === totalSlides - 1) ? 0.2 : 1;
-    // and disables the button
-    prevButton.disabled = (currentSlide === 0);
-    nextButton.disabled = (currentSlide === totalSlides - 1);
+    // If there are no more items in the arrow direction
+    // changes the opacity of the arrow button and disables the button
+    prevButtons.forEach(button => {
+        button.style.opacity = (currentSlide === 0) ? 0.2 : 1;  
+        button.disabled = (currentSlide === 0);
+    });
+    nextButtons.forEach(button => {
+        button.style.opacity = (currentSlide === totalSlides - 1) ? 0.2 : 1;
+        button.disabled = (currentSlide === totalSlides - 1);
+    });
     
     projects.forEach((proj, index) => {
         if (index === currentSlide) {
