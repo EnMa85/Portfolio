@@ -135,14 +135,14 @@
         padding: 0.8%;
     }
     .section {
-        margin: 5% auto;
         width: 80vw;
+        margin: 3% auto;
     }
     .section h3 {
         margin: 0 auto 5%;
     }
     .card {
-        margin: 0 auto 5%;
+        margin: 0 auto 10%;
         padding: 3% 5%;
     }
     .card p {
