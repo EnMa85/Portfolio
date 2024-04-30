@@ -38,6 +38,9 @@ a.repo {
 .par p {
     font-size: 1.3vw;
 }
+.screen img, .screen>span img {
+    margin: 1% auto;
+}
 img.screen-max {
     width: 100%;
     height: fit-content;
