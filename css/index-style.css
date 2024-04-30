@@ -26,9 +26,9 @@ button {
     border: none;
 }
 .button {
-    width: 7.5rem;
+    width: 8rem;
     min-width: max-content;
-    padding: 0.5rem 1.5em;
+    padding: 0.5rem 1.5rem;
     text-align: center;
     font-size: 1.15rem;
     font-weight: bolder;
@@ -94,7 +94,7 @@ header {
     width: fit-content;
     height: 100%;
     margin: auto;
-    padding: 0.5rem 1.3rem;
+    padding: 0.5rem 1.4rem;
 }
 #menu a:not(.active){
     background-color: transparent;

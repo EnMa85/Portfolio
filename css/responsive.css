@@ -1,6 +1,43 @@
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1680px) {
+    :root {
+        font-size: 13px;
+    }
+    #menu>.button {
+        padding: 0.5rem 1.3rem;
+    }
+    #menu {
+        padding: 0.5rem 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
     :root {
         font-size: 12px;
+    }
+    header {
+        height: 15rem;
+    }
+    #menu>.button {
+        padding: 0.5rem 1.2rem;
+    }
+    #menu {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    :root {
+        font-size: 11px;
+    }
+    header {
+        height: 14rem;
+    }
+    #menu>.button {
+        width: 7.5rem;
+        padding: 0.4em 0.9rem;
+    }
+    #menu {
+        padding: 0.5rem 0.9rem;
     }
     .proj-card img {
         height: 14rem;
@@ -11,15 +48,18 @@
     :root {
         font-size: 10px;
     }
-    .proj-card img {
-        height: 12rem;
+    header {
+        height: 13.5rem;
+    }
+    #menu>.button {
+        width: 7rem;
+        padding: 0.4rem 0.5rem;
     }
     #menu {
-        padding: 0.5%;
+        padding: 0.5rem 0.4rem;
     }
-    #menu a.active, #menu a {
-        width: 7rem;
-        padding: 1 0.2%;
+    .proj-card img {
+        height: 12rem;
     }
     .project {
         flex-direction: column;
@@ -36,7 +76,20 @@
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 880px) {
+    header {
+        height: 10rem;
+    }
+    #menu>.button {
+        min-width: 6.5rem;
+        padding: 0.2rem 0.1rem;
+    }
+    #menu {
+        padding: 0.2rem 0.3rem;
+    }
+}   
+
+@media only screen and (max-width: 700px) {
     :root {
         font-size: 12px;
     }
@@ -48,19 +101,31 @@
         margin: auto;                 
     }
     #title {
+        padding: 1% 0;
         font-size: 0.7rem;
     }
     header.flexOr {
         flex-direction: column-reverse;
         padding: 0;
-        margin: 0.5% 0 0;
-        height: fit-content;
+    }
+    header {
+        margin: 0.5% auto 0.5%;
+        height: auto;
+    }
+    .carousel picture img {
+        object-fit: contain;
+        padding: 0;
+        margin: auto;
+    }
+    .carousel {
+        height: auto;
+        padding: 0;
     }
     #menu {
         flex-direction: row;
         width: 100%;
         margin: 0 auto 4%;
-        padding: 1%;
+        padding: 0.9%;
         background-color: var(--light-text);
     }
     #menu a.active, #menu a {
@@ -110,6 +175,9 @@
 @media only screen and (max-width: 480px) {
     :root {
         font-size: 10px;
+    }
+    #title {
+        padding: 1.1% 0;
     }
     .section {
         width: 85vw;
