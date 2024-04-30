@@ -148,6 +148,9 @@
     .card p {
         text-align: center;
     }
+    .last-proj img {
+        width: 80%;
+    }
     .proj-card img {
         height: 16rem;
     }
@@ -167,7 +170,7 @@
     .screen>img {
         width: 100%;
     }
-    .par p {
+    .par p, .last-proj p, .intro p {
         font-size: 1.1rem;
     }
 }
