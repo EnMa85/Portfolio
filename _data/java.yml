@@ -1,14 +1,18 @@
 cards1:
-  - title: Analisi di bilancio
-    image: ../img/card-progetti/bilanci.PNG
-    content: Web app che analizza bilanci ed incorpora anche un blog.
+  - title: Supermercato
+    image: ../img/card-progetti/supermercatoJava.PNG
+    content: Web app sviluppata con servlet per gestire gli ordini un supermercato online.
             <br>
-            Segue uno schema MVC object oriented.
-    link: ../linguaggi/php.html
+            Implementa un'area cliente ed un'area gestore.
+    link: ../progetti/java/supermercatoJava.html
     type: proj-card card
-  - title: Registro presenze
-    image: ../img/card-progetti/registro.PNG
-    content: Web app che gestisce il registro elettronico di una scuola online, offrendo anche una serie di 
-             funzionalità utili al docente.
-    link: ../progetti/php/registro.html
+  - title: Cineteca
+    image: ../img/card-progetti/cineteca.PNG
+    content: GUI Swing per la consultazione e l'aggiornamento di un database di film.
+    link: ../progetti/java/cineteca.html
+    type: proj-card card
+  - title: Distributore
+    image: ../img/card-progetti/distributoreSwing.PNG
+    content: GUI Swing per un distributore di bevande.
+    link: ../progetti/java/distributore.html
     type: proj-card card

@@ -1,0 +1,76 @@
+---
+layout: project_base
+title: Cineteca
+link: https://github.com/EnMa85/Esercizi_Java/tree/main/SwingFilm
+---
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce un archivio di film tramite un'interfaccia implementata con Swing ed
+                un database MySql.
+                <br><br>
+                I singoli pulsanti sono implementati separatamente per mantenere pulita la gestione dell'interfaccia.
+            </p>
+        </div>
+        <div class="screen">
+            <span>
+                <img width="35%" src="{{ site.baseurl }}/img/progetti/cineteca/menu.PNG">
+                <img width="58%" src="{{ site.baseurl }}/img/progetti/cineteca/codeButtons.PNG">
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il metodo cercaGenere esegue una query di tipo Distinct che seleziona i generi presenti nella tabella Film.
+                <br> 
+                La lista ottenuta viene usata per visualizzare un elenco a tendina da cui scegliere il genere da cercare.
+                <br><br>
+                Una seconda query restituisce i film corrispondenti, che viene passata al metodo stampa.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/cineteca/codeCerca.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La connessione con il database viene gestita da un'apposita classe.
+                <br><br>
+                Il metodo eseguiQuery riceve in ingresso la stringa query ed una serie di parametri di tipo Object.
+                <br>
+                Tramite un ciclo for assegna un segnaposto per ogni parametro ed esegue il prepared statement.
+                <br><br>
+                Se si tratta di una select, salva in result set ottenuto dal db e lo restituisce alla chiamante.
+                Se si tratta di una variazione, restituisce una lista vuota.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/cineteca/codeDB.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il result set ottenuto viene passato al metodo creaListaDaObject che effettua il cast ad oggetti di tipo Film.
+                <br>
+                In tal modo la classe DatabaseManager rimane aspecifica e portabile.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/cineteca/codeArray.PNG">
+        </div>
+    </div>
+</div>
