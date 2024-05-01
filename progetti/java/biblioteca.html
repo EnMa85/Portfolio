@@ -1,0 +1,130 @@
+---
+layout: project_base
+title: Biblioteca
+link: https://github.com/EnMa85/Esercizi_Java/tree/main/WebBiblioteca/src/main
+---
+
+<div class="section">
+    <div class="card">
+            <h3>Demo progetto</h3>
+            <video width="95%" controls autoplay>
+                <source src="{{ site.baseurl }}/img/progetti/biblioteca/biblioteca-demo.mp4" type="video/mp4" alt="Demo progetto">
+                Non è possibile riprodurre il video.
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce il portale prenotazioni di una biblioteca ed è implementato con classi 
+                servlet e database MySql.
+                <br><br>
+                La home è suddivisa in area cliente ed area gestore e due pulsanti distinti fanno apparire le 
+                input labels per l'area desiderata.
+                <br><br>
+                Degli script js gestiscono la visualizzazione del form corretto, verificano la correttezza 
+                formale del codice fiscale e crittografano le password prima di inviarle alla servlet di login.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/script.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                L'utente, dopo aver inserito le credenziali può accedere oppure creare direttamente un account.
+                <br>
+                La servlet verifica quale pulsante è stato premuto (accedi o registrati) confrontando il valore del parametro 
+                associato al pusante.
+                <br><br>
+                Nel caso di registrazione, il sistema verifica se l'utente esiste già ed in caso negativo attiva il nuovo account, 
+                altrimenti reindirizza ad una pagina di avviso.
+                <br>
+                Nel caso di accesso, oltre alle credenziali verifica se l'account non è stato bloccato e salva l'id utente nella sessione.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/accediOregistrati.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/accedi.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il metodo caricaHome indirizza all'area riservata solamente se la sessione è attiva, altrimento rimanda alla pagina di login.
+                <br><br>
+                Nell'area utente viene stampato l'elenco dei libri disponibili pescati dalla tabella generale, 
+                con una radio box per scegliere il libro da prenotare.
+                <br><br>
+                Cliccando su prenota, la servlet di prenotazione salva nella tabella del cliente il libro selezionato 
+                e lo imposta come non disponibile nella tabella generale dei libri.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/caricaHome.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/servletPrenota.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                L'utente può anche consultare lo storico delle prenotazioni e verificare se ha ancora libri da restituire.
+                <br><br>
+                Viene effettuata una join query con i risultati ordinati per data e viene richiesto al db di restituire la stringa 
+                "non ancora restituito" al posto della data di restituzione, qualora questa sia ancora nulla.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/queryStorico.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/storico.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Nell'area gestore viene stampato l'elenco completo con le check box per selezionare più libri alla volta ed i pulsanti 
+                per variarne la disponibilità o eliminarli.
+                <br><br>
+                Le varie tipologie di operazioni sono gestite dalla servlet con uno switch e per identificare i libri selezionati 
+                viene utilizzato un ciclo for.
+                <br><br>
+                Quando un libro viene reimpostato come disponibile, viene aggiornata anche la tabella del cliente che aveva prenotato 
+                quel libro, dove verrà inserita la data di restituzione effettiva.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/gestoreJsp.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/impostaDisponibili.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                In ogni pagina riservata viene verificato che l'accesso sia consentito per quel tipo di account (admin o utente), 
+                utilizzando un filtro nel file XML ed una servlet che gestisce la sessione.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/biblioteca/sessione.PNG">
+        </div>
+    </div>
+</div>

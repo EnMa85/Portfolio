@@ -1,10 +1,23 @@
 cards1:
   - title: Supermercato
     image: ../img/card-progetti/supermercatoJava.PNG
-    content: Web app sviluppata con servlet per gestire gli ordini un supermercato online.
+    content: Web app sviluppata con classi servlet e database MySql per gestire gli ordini un supermercato online.
             <br>
             Implementa un'area cliente ed un'area gestore.
     link: ../progetti/java/supermercatoJava.html
+    type: proj-card card
+  - title: Biblioteca
+    image: ../img/card-progetti/biblioteca.PNG
+    content: Web app sviluppata con servlet e MySql per gestire l'archivio libri e le prenotazioni di una biblioteca.
+            <br>
+            E' suddivisa in area cliente ed area gestore.
+    link: ../progetti/java/biblioteca.html
+    type: proj-card card
+cards2:
+  - title: Autosalone
+    image: ../img/card-progetti/autosalone.PNG
+    content: 
+    link: ../progetti/java/autosalone.html
     type: proj-card card
   - title: Cineteca
     image: ../img/card-progetti/cineteca.PNG
