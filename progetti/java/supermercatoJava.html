@@ -1,0 +1,173 @@
+---
+layout: project_base
+title: Supermercato
+link: https://github.com/EnMa85/Esercizi_Java/tree/main/WebSupermercato
+---
+
+<div class="section">
+    <div class="card">
+            <h3>Demo progetto</h3>
+            <video width="95%" controls autoplay>
+                <source src="{{ site.baseurl }}/img/progetti/supermercatoJava/supermercato-demo.mp4" type="video/mp4" alt="Demo progetto">
+                Non è possibile riprodurre il video.
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto gestisce il portale per gli ordini di un supermercato ed è diviso in area cliente 
+                ed area gestore.
+                <br>
+                E' implementato con le servlet e le pagine JSP ed utilizza il dialetto MySql per il database.
+                <br><br>    
+                Gli ordini vengono gestiti con due tabelle, quella per i dati generali (data, FK cliente, totale) 
+                e quella dei dettagli contenente la lista dei prodotti ordinati.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/tabelle.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Le credenziali per il database sono settate in un file di configurazione e richiamate dalla classe 
+                DatabaseManager che gestisce le connessioni.
+                <br><br>
+                Il metodo eseguiQuery riceve in ingresso la query con una lista indefinita di parametri e restituisce un 
+                arrayList di mappe di oggetti.
+                <br>
+                In tal modo è utilizzabile per ogni tipo di oggetto e di query.
+                <br><br>
+                Se sono presenti dati nell'array params ricevuto, questi vengono ciclati e sostituiti dal segnaposto ? 
+                per rendere la query sicura.
+                <br>
+                Se la query è di tipo select, il result set ricevuto viene convertito ad arraylist e restituito al chiamante.
+                <br>
+                Per le altre query viene stampata la conferma dell'operazione e restituito un arraylist vuoto.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/database.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Prima di caricare le pagine riservate viene verificato che la sessione sia attiva e vengono impediti gli 
+                accessi non abilitati (Servet Sessione e filtro XML).
+                <br><br>
+                Nell'area riservata utente viene stampata la lista dei prodotti disponibli, ognuno con la propria check box e 
+                la casella per la quantità richiesta. 
+                <br>
+                Già nella jsp viene impedito di settare una quantità negativa o superiore 
+                alla disponibilità di magazzino.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/stampaProdotti.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Per registrare un ordine vengono eseguite in sequenza 4 query.
+                <br><br>
+                Prima vengono salvati i dati generali dell'ordine collegandolo all'utente tramite foreign key.
+                <br>
+                Poi viene richiesto l'id dell'ordine appena creato, che servirà per la tabella dettaglio da collegare con FK.
+                <br>
+                Dunque vengono iterati tutti i prodotti selezionati in un ciclo nel quale, per ciascuno, viene salvato l'id 
+                nella tabella dettaglio ordini e viene aggiornata la quantità residua nella tabella prodotti.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/ordinaServlet.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il cliente può visualizzare lo storico di tutti i suoi ordini.
+                <br><br>
+                Per incrociare i dati delle due tabelle ordini viene effettuata una query alla tabella con i dati generali 
+                e ad ogni record viene aggiunta una concatenazione di tutti i record della tabella dettaglio che hanno lo stesso id ordine.
+                <br>
+                Ogni riga conterrà quindi anche una stringa con tutti i prodotti associati all'ordine, separati da una virgola.
+                <br><br>
+                La stringa viene successivamente splittata all'elemento separatore, per ricostruire un array dei prodotti dell'ordine.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/storicoServlet.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Nella pagina jsp utilizziamo la notazione jstl per scorrere e stampare la lista degli ordini e, per ogni riga, 
+                cicliamo anche l'array con il dettaglio prodotti ottenuto nella servlet.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/storicoJsp.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il gestore nella sua area può inserire nuovi prodotti e modificare quelli già in elenco, aggiornando 
+                prezzo, quantità o eliminandoli.
+                <br><br>
+                Nel caso di modifica, la servlet riceve i prodotti selezionati nella JSP e li cicla salvando in una lista gli 
+                id dei prodotti selezionati.
+                <br><br>
+                Successivamente esegue la query richiesta aggiungendo la clausola IN per contenere la lista degli id inviati.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/aggiornaprezzo.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il gestore nella sua area può inserire nuovi prodotti e modificare quelli già in elenco, aggiornando 
+                prezzo, quantità o eliminandoli.
+                <br><br>
+                Nel caso di modifica, la servlet riceve i prodotti selezionati nella JSP e li cicla salvando in una lista gli 
+                id dei prodotti selezionati.
+                <br><br>
+                Successivamente esegue la query richiesta aggiungendo la clausola IN per contenere la lista degli id inviati.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/supermercatoJava/aggiornaprezzo.PNG">
+        </div>
+    </div>
+</div>
