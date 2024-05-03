@@ -1,12 +1,4 @@
 cards:
-  - title: Java
-    image: ./img/loghi/logoJava.PNG
-    content: Raccolta di progetti Java suddivisi per tipologia di applicazione.
-            <br><br>
-            Le GUI utilizzano il framework Swing, mentre le WebApp sono implementate
-            con le Servlet oppure con il framework Spring Boot.
-    link: ./linguaggi/java.html
-    type: card
   - title: Php
     image: ./img/loghi/logoPhp.PNG
     content: Raccolta di WebApp implementate in PHP sia nel front-end che nel back-end.
@@ -14,6 +6,14 @@ cards:
             Sfruttando la versatilità del linguaggio sono state sviluppate in procedurale 
             o seguendo uno schema OOP.
     link: ./linguaggi/php.html
+    type: card
+  - title: Java
+    image: ./img/loghi/logoJava.PNG
+    content: Raccolta di progetti Java suddivisi per tipologia di applicazione.
+            <br><br>
+            Le GUI utilizzano il framework Swing, mentre le WebApp sono implementate
+            con le Servlet oppure con il framework Spring Boot.
+    link: ./linguaggi/java.html
     type: card
   - title: Python
     image: ./img/loghi/logoPython.PNG
