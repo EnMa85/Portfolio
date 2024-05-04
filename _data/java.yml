@@ -1,4 +1,11 @@
 cards1:
+  - title: Autosalone
+    image: ../img/card-progetti/autosalone.PNG 
+    content: Web app sviluppata con Spring Boot e database MySql per gestire un autosalone.
+            <br>
+            Comprende un'area per gli ordini ed un'altra per le statistiche sulle vendite.
+    link: ../progetti/java/autosalone.html
+    type: proj-card card
   - title: Supermercato
     image: ../img/card-progetti/supermercatoJava.PNG
     content: Web app sviluppata con classi servlet e database MySql per gestire gli ordini un supermercato online.
@@ -14,11 +21,6 @@ cards1:
     link: ../progetti/java/biblioteca.html
     type: proj-card card
 cards2:
-  - title: Autosalone
-    image: ../img/card-progetti/autosalone.PNG
-    content: 
-    link: ../progetti/java/autosalone.html
-    type: proj-card card
   - title: Cineteca
     image: ../img/card-progetti/cineteca.PNG
     content: GUI Swing per la consultazione e l'aggiornamento di un database di film.
@@ -26,6 +28,6 @@ cards2:
     type: proj-card card
   - title: Distributore
     image: ../img/card-progetti/distributoreSwing.PNG
-    content: GUI Swing per un distributore di bevande.
+    content: GUI Swing per un distributore automatico di bevande.
     link: ../progetti/java/distributore.html
     type: proj-card card

@@ -9,15 +9,15 @@ cards:
     type: card
   - title: Java
     image: ./img/loghi/logoJava.PNG
-    content: Raccolta di progetti Java suddivisi per tipologia di applicazione.
+    content: Raccolta di progetti full stack sviluppati in Java.
             <br><br>
-            Le GUI utilizzano il framework Swing, mentre le WebApp sono implementate
+            Le GUI utilizzano il framework Swing, le WebApp sono implementate
             con le Servlet oppure con il framework Spring Boot.
     link: ./linguaggi/java.html
     type: card
   - title: Python
     image: ./img/loghi/logoPython.PNG
-    content: Raccolta di progetti Python suddivisi per tipologia di applicazione.
+    content: Raccolta di progetti full stack sviluppati in Python.
             <br><br>
             I progetti GUI sono implementati utilizzando il framework Tkinter, 
             mentre le WebApp utilizzano Flask.

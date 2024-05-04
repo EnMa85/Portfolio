@@ -1,0 +1,148 @@
+---
+layout: project_base
+title: Autosalone
+link: https://github.com/EnMa85/Esercizi_Java/tree/main/SpringAutovetture 
+---
+
+<div class="section">
+    <div class="card">
+            <h3>Demo progetto</h3>
+            <video width="95%" controls autoplay>
+                <source src="{{ site.baseurl }}/img/progetti/autosalone/autosalone-demo.mp4" type="video/mp4" alt="Demo progetto">
+                Non è possibile riprodurre il video.
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il progetto è implementato con Spring boot ed è strutturato secondo uno scherma Model View Controller.
+                <br><br>
+                Utilizza Gradle per la compilazione, MySql per il database, Thymeleaf per le view 
+                e XChart per la creazione di grafici.
+                <br><br><br>
+                Nella pagina iniziale viene visualizzato un carosello con le auto disponibili, implementato con Javascript.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/codeCarosello.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Cliccando sul pulsante Stampa richieste, il controller effettua una query della tabella prenotazioni 
+                e utilizza l'interfaccia RowMapper per ritornare un ArrayList di oggetti Autovettura.
+                <br><br>
+                Nella view verrà stampato un elenco numerato utilizzando la notazione Thymeleaf.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/stampaController.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/queryAuto.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/rowmap.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/stampaAuto.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Cliccando sul pulsante Inserisci richiesta, l'operatore può registrare l'auto prenotata scegliendo 
+                da un elenco a tendina.
+                <br><br>
+                L'elenco viene incluso dinamicamente, chiedendo al database la lista dei modelli e trasferendola 
+                nella view, dove vengono ciclati per mostrarli nella select.
+                <br><br>
+                La scelta viene inviata al controller che salva i dati dell'auto nella tabella delle prenotazioni.
+                <br><br>
+                Successivamente crea con gli stessi dati un nuovo oggetto di tipo Autovettura, lo setta come 
+                flash attribute e reindirizza nuovamente alla stessa pagina, dove verrà stampata l'auto selezionata.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/controllerSel.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/selezionaView.PNG">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/controllerModelli.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                Il gestore può visualizzare delle statistiche sulle vendite, per colore o per modello richiesto.
+                <br><br>
+                Per generarle viene effettuata una query con contatore, che restituisce una mappa contenente il valore 
+                del campo (i colori in questo caso) come chiave, ed il conteggio come valore.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/queryConteggio.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                A partire dai dati dei conteggi per colore e per modello, otteniamo dei grafici.
+                <br><br>
+                La classe Grafici include la libreria XChart ed implementa un metodo per creare grafici a torta ed 
+                uno per i grafici a barre.
+                <br><br>
+                Entrambi i metodi ricevono in ingresso i conteggi, il nome del grafico ed il nome che vogliamo dare 
+                all'immagine generata.
+                <br><br>
+                Il controller chiama questi metodi ed invia i grafici ottenuti alla view.
+                <br><br> 
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/graficiController.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                All'avvio della view, dunque, viene visualizzata una tabella con i conteggi e vengono anche 
+                generati e precaricati nel browser 4 grafici, inizialmente non visualizzati.
+                <br><br>
+                Quando si clicca sul pulsante di uno dei grafici, viene effettuato un redirect alla stessa pagina 
+                con il nome del grafico settato come attributo nell'indirizzo.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/viewStatistiche.PNG">
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="project card">
+        <div class="par">
+            <p>
+                La view visualizzerà il grafico con il nome corrispondente a quello dell'indirizzo impostato 
+                nel href del bottone.
+                <br><br>
+                Ogni volta che si torna all'area statistiche iniziale, i grafici verranno rigenerati.
+            </p>
+        </div>
+        <div class="screen">
+            <img class="screen-max" src="{{ site.baseurl }}/img/progetti/autosalone/screenStatistiche.PNG">
+        </div>
+    </div>
+</div>
