@@ -20,70 +20,33 @@ title: Portfolio Progetti
     </div>
 </div>
 
+
 <div class="section">
+    <h3>Progetti in evidenza</h3>
     <div class="carousel card">
         <div class="flexVert">
-            <h3>Progetti in evidenza</h3>
-            <div class="last-proj">
-                <div class="flexOr">
-                    <button onclick="prevSlide()" class="prevButton">
-                        <img class="arrow" src="{{ site.baseurl }}/img/fr-sx.PNG" alt="Precedente">
-                    </button>
-                    <img src="{{ site.baseurl }}/img/card-progetti/home_bilanci.PNG" alt="anteprima pagina progetto">
-                    <button onclick="nextSlide()" class="nextButton">
-                        <img class="arrow" src="{{ site.baseurl }}/img/fr-dx.PNG" alt="Successivo">
-                    </button>
-                </div>
-                <p>
-                    Web app PHP che effettua l'analisi per indici a partire dai dati di bilancio inseriti dall'utente
-                    e permette di salvare i risultati per visualizzarli nello storico.
-                    <br><br>
-                    In altre sezioni è possibile consultare articoli ed inviare domande allo staff.
-                    <br>
-                    Comprende una sezione amministratore che facilita l'aggiornamento dei contenuti del sito.
-                    <br><br>
-                    E' programmata ad oggetti secondo uno schema MVC e utilizza il Composer per la gestione delle dipendenze.
-                </p>
-                <div>
-                    <a class="button" href="">Vai al progetto</a>
-                </div>
-            </div>
 
-            <div class="last-proj">
-                <div class="flexOr">
-                    <button onclick="prevSlide()" class="prevButton">
-                       <img class="arrow" src="{{ site.baseurl }}/img/fr-sx.PNG" alt="Precedente">
-                    </button>
-                    <img src="{{ site.baseurl }}/img/card-progetti/home_registro.PNG" alt="anteprima pagina progetto">
-                    <button onclick="nextSlide()" class="nextButton">
-                       <img class="arrow" src="{{ site.baseurl }}/img/fr-dx.PNG" alt="Successivo">
-                    </button>
-                </div>
-                <p>
-                    Web app PHP che gestisce il registro elettronico di una scuola online.
-                    <br><br>
-                    Offre al docente la possibilità di consultare e scaricare l'elenco dei propri corsi 
-                    ed il calendario delle lezioni, o di inviare un'e-mail all'assistenza tramite un form.
-                    <br><br>
-                    Il progetto include il file MySQL per la creazione delle tabelle, oltre funzioni 
-                    e stored procedures per gestirle.
-                    <br><br>
-                    E' programmato in procedurale e utilizza il Composer per la gestione delle dipendenze.
-                </p>
-                <div>
-                    <a class="button" href="{{ site.baseurl }}/progetti/php/registro.html">Vai al progetto</a>
-                </div>
-            </div>
+            {% for project in site.data.highlighted.projects %}
+            {% 
+                include highlighted-base.html 
+                title = project.title 
+                image = project.image
+                content = project.content
+                link = project.link
+            %}
+        {% endfor %}
+
         </div>
     </div>
 </div>
+        
 
 <div class="section">
     <h3>Linguaggi</h3>
     <div class="flexOr">
         {% for card in site.data.index.cards %}
             {% 
-                include card_base.html 
+                include card-base.html 
                 title = card.title 
                 image = card.image
                 content = card.content

@@ -1,0 +1,59 @@
+projects:
+  - title: Web app PHP
+    image: img/card-progetti/home-registro.PNG
+    content: Progetto PHP full stack che gestisce il registro elettronico di una scuola online.
+             <br><br>
+             Offre al docente la possibilità di consultare e scaricare l'elenco dei propri corsi 
+             ed il calendario delle lezioni, o di inviare un'e-mail all'assistenza tramite un form.
+             <br><br>
+             Il progetto include il file MySQL per la creazione delle tabelle, oltre funzioni 
+             e stored procedures per gestirle.
+             <br>
+             E' programmato in procedurale e utilizza il Composer per la gestione delle dipendenze.
+    link: progetti/php/registro.html
+  - title: Web app Java Spring boot
+    image: img/card-progetti/home-autosalone.PNG
+    content: Web app Java per gestire le prenotazioni di un autosalone.
+             <br><br>
+             Permette al gestore di visualizzare le richieste ed inserirne una nuova.
+             Inoltre implementa un'area statistiche con i dati delle vendite e l'elaborazione di grafici.
+             <br><br>
+             E' sviluppata con Spring boot e segue uno schema MVC.
+             <br>
+             Utilizza Gradle per la compilazione, Thymeleaf per la view, MySql per il database, 
+             XChart per l'elaborazione di grafici nel back-end.
+    link: progetti/java/autosalone.html
+  - title: Web app Java Servlet e JSP
+    image: img/card-progetti/home-supermercatoJava.PNG
+    content: Web app Java per gestire gli ordini online per un supermercato.
+             <br><br>
+             E' suddivisa in area cliente ed area gestore.
+             <br>
+             Il cliente può effettuare un nuovo ordine e visualizzare lo storico dei precedenti.
+             Il gestore può inserire, modificare ed eliminare gli articoli.
+             <br><br>
+             E' sviluppata con le Servlet, le pagine JSP e MySql per il database.
+             Gestisce gli accessi alle aree riservate tramite le sessioni ed i filtri nel file XML.
+    link: progetti/java/supermercatoJava.html
+  - title: Web app Python Flask
+    image: img/card-progetti/home-immobiliare.PNG
+    content: Web app Python che gestisce gli annunci online di un'agenzia immobiliare.
+             <br><br>
+             E' suddivisa in area cliente ed area gestore.
+             <br>
+             Il cliente può visualizzare gli annunci ed inserirne di propri, caricando anche una foto della casa.
+             Il gestore può approvare o rifiutare le richieste di inserimento degli annunci.
+             <br><br>
+             E' sviluppato con il framework Flask ed utilizza MySql per il database.
+    link: progetti/python/immobiliare.html
+ # - title: Web app PHP MVC
+ #   image: img/card-progetti/home-bilanci.PNG
+ #   content: Web app PHP che effettua l'analisi per indici a partire dai dati di bilancio inseriti dall'utente
+ #            e permette di salvare i risultati per visualizzarli nello storico.
+ #            <br><br>
+ #            In altre sezioni è possibile consultare articoli ed inviare domande allo staff.
+ #            <br>
+ #            Comprende una sezione amministratore che facilita l'aggiornamento dei contenuti del sito.
+ #            <br><br>
+ #            E' programmata ad oggetti secondo uno schema MVC e utilizza il Composer per la gestione delle dipendenze.
+ #   link: linguaggi/php.html

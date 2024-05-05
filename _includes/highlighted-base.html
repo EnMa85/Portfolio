@@ -1,0 +1,18 @@
+<div class="last-proj">
+    <h4>{{ include.title }}</h4>
+    <div class="flexOr">
+        <button onclick="prevSlide()" class="prevButton">
+            <img class="arrow" src="{{ site.baseurl }}/img/fr-sx.PNG" alt="Precedente">
+        </button>
+            <img src="{{ site.baseurl }}/{{ include.image }}" alt="anteprima pagina progetto">
+        <button onclick="nextSlide()" class="nextButton">
+            <img class="arrow" src="{{ site.baseurl }}/img/fr-dx.PNG" alt="Successivo">
+        </button>
+    </div>
+    <p>
+        {{ include.content }}
+    </p>
+    <div>
+        <a class="button" href="{{ site.baseurl }}/{{ include.link }}">Vai al progetto</a>
+    </div>
+</div>

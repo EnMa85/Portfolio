@@ -216,9 +216,13 @@ div.section>div.flexOr {
     flex-direction: row;
     align-items: start;
 }
+.last-proj h4 {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
 .last-proj img {
     width: 60%;
-    height: fit-content;
+    height: auto;
     padding: 0;
 }
 .last-proj p {
