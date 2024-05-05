@@ -1,9 +1,9 @@
 /* ---- Generals -------------------------------------------------------------------------------------------------------*/
 :root {
     --title: rgba(13, 55, 64, 0.756);
-    --header: rgba(48, 7, 29, 0.219);
     --button: rgba(71, 29, 77, 0.629);
     --light-text:rgb(255, 255, 255);
+    --medium-text: rgb(134, 180, 190);
     --dark-text: rgba(110, 41, 79, 0.714);
     font-size: 15px;
 }
@@ -73,7 +73,7 @@ footer>span>a {
     color: var(--light-text);
 }
 footer>span>a:hover {
-    color: lightyellow;
+    color: var(--medium-text);
 }
 footer>span>img{
     height: 3rem;
@@ -206,7 +206,7 @@ div.section>div.flexOr {
     width: 100%;
 }
 .intro p {
-    margin: 2% 3%;
+    margin: 0.7% 3%;
 }
 /* ---- END Main sections ----------------------------------------------------------------------------------------------*/
 
