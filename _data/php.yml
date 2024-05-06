@@ -7,7 +7,7 @@ cards:
     type: proj-card card
   - title: Analisi di bilancio - IN LAVORAZIONE
     image: ../img/card-progetti/bilanci.PNG
-    content: Web app che analizza bilanci ed incorpora anche un blog.
+    content: Web app che effettua l'analisi per indici dei bilanci inseriti dall'utente. Incorpora anche un blog.
             <br>
             Segue uno schema MVC object oriented.
     link: ../linguaggi/php.html
